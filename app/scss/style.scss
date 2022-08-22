@@ -4,6 +4,66 @@
 
 @import 'global';
 
+.header {
+  padding: 60px 0 70px 0;
+  line-height: 1;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+gi .menu {
+  display: flex;
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    margin-right: 44px;
+    font-size: 18px;
+    line-height: 1;
+    color: $default;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+
+  &__item--margin {
+    margin-right: 19px;
+  }
+}
+
+.bar {
+  display: flex;
+
+  &__link {
+    position: relative;
+  }
+
+  &__img--margin {
+    margin-right: 35px;
+  }
+
+  &__num {
+    position: absolute;
+    top: -5px;
+    left: 12px;
+    width: 14px;
+    height: 14px;
+    background-color: $accent;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
 
 
 

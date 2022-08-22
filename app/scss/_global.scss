@@ -1,1 +1,12 @@
-body {}
+body {
+  color: $default;
+  font-size: 20px;
+  line-height: 1.5;
+  @extend %rubic-500;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
