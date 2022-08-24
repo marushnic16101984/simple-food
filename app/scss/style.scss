@@ -5,7 +5,7 @@
 
 .header {
   padding: 61px 40px 53px 20px;
-  line-height: 1;
+  line-height: 1.2;
 
   &__wrapper {
     display: flex;
@@ -15,6 +15,39 @@
 
   }
 }
+
+.logo {
+  display: block;
+  padding: 2px 3px 0;
+  transition: opacity 0.8s ease, box-shadow 0.8s ease;
+  max-width: 206px;
+
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $orange-900;
+    border-radius: 5px;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &__margin {
+    margin-bottom: 28px;
+  }
+
+
+
+  // &__img {
+  //   // display: inline;
+  // }
+}
+
+
 
 .menu {
   display: flex;
@@ -64,117 +97,6 @@
   }
 }
 
-.footer {
-  &__wrapper {
-    display: grid;
-    grid-template-columns: 23% 18.9% 13.7% 21.8% 21.9%;
-    padding-bottom: 51px;
-    border-bottom: 1px solid $gray;
-  }
-
-  &__list {
-    font-size: 18px;
-  }
-
-  &__link {
-    color: $dark;
-  }
-
-  &__item {
-    margin-bottom: 20px;
-  }
-
-  &__input {
-    display: block;
-    padding: 13px 15px;
-    margin-bottom: 12px;
-    border: 1px solid $gray;
-    border-radius: 5px;
-    max-width: 200px;
-    width: 100%;
-    font-size: 14px;
-
-    &::placeholder {
-      color: $gray;
-    }
-  }
-
-  &__btn {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: none;
-    column-gap: 15px;
-    padding: 13px 38px 13px 39px;
-    border: none;
-    border-radius: 5px;
-    background-color: $orange-900;
-    color: #ffffff;
-    font-size: 14px;
-  }
-
-  &__part {
-    margin-bottom: 15px;
-  }
-
-
-  &__links {
-    color: $dark;
-    font-size: 16px;
-    line-height: 1.7;
-  }
-
-  &__items {
-    margin-bottom: 15px;
-  }
-
-  &__svg {
-    margin-right: 7px;
-  }
-
-}
-
-.logo__img--margin {
-  margin-bottom: 30px;
-}
-
-
-.socials {
-  display: flex;
-
-  &__link {
-    width: 39px;
-    height: 39px;
-    background-repeat: no-repeat;
-  }
-
-  &__item {
-    position: relative;
-    background-color: $gray;
-    border-radius: 50%;
-    width: 39px;
-    height: 39px;
-    margin-right: 13px;
-  }
-
-  &__link {
-    position: absolute;
-    top: 9px;
-    left: 10px;
-  }
-
-  &__items {
-    position: relative;
-    margin-right: 13px;
-  }
-}
-
-.footer-bottom {
-  padding: 30px 0;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1;
-}
-
 .hero {
 
   &__wrapper {
@@ -214,7 +136,7 @@
     font-size: 18px;
     color: #ffffff;
     letter-spacing: 0.3px;
-    margin-right: 34px;
+    // margin-right: 34px;
   }
 
   &__link {
@@ -229,6 +151,127 @@
 
   }
 }
+
+.footer {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 23% 20% 13.7% 21.8% 21.9%;
+    padding-bottom: 51px;
+    border-bottom: 1px solid $gray;
+  }
+
+  &__list {
+    font-size: 18px;
+  }
+
+  &__link {
+    color: $dark;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    display: block;
+    padding: 13px 15px;
+    margin-bottom: 12px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    max-width: 200px;
+    width: 100%;
+    font-size: 14px;
+    transition: box-shadow 0.5s ease;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $orange-900;
+      border: transparent;
+    }
+
+    &::placeholder {
+      color: $gray;
+      transition: color 0.5s;
+    }
+
+    &:hover::placeholder {
+      color: $darkBlue-900;
+    }
+
+  }
+
+  &__btn {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: none;
+    column-gap: 15px;
+    padding: 13px 38px 13px 39px;
+    border: none;
+    border-radius: 5px;
+    background-color: $orange-900;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  &__part {
+    margin-bottom: 15px;
+  }
+
+
+  &__links {
+    color: $dark;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  &__items {
+    margin-bottom: 15px;
+  }
+
+  // &__svg {
+  //   margin-right: 7px;
+  // }
+
+}
+
+
+
+.socials {
+  display: flex;
+
+  &__link {
+    width: 39px;
+    height: 39px;
+    background-repeat: no-repeat;
+  }
+
+  &__item {
+    position: relative;
+    background-color: $gray;
+    border-radius: 50%;
+    width: 39px;
+    height: 39px;
+    margin-right: 13px;
+  }
+
+  &__link {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+  }
+
+  &__items {
+    position: relative;
+    margin-right: 13px;
+  }
+}
+
+.footer-bottom {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1;
+}
+
 
 
 
