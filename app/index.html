@@ -1,31 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Simple food | Main</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aspernatur alias sunt ducimus veniam est ratione labore
-  necessitatibus placeat, sim
-  ratione eligendi eveniet, a quis sed cupiditate. Nihil sequi nemo hic a eveniet voluptatibus?
-  Iure porro consectetur earum impedit pariatur odit asperiores! Ipsam deleniti laudantium earum sit dolore facere
-  eveniet sunt doloribus ab incidunt molestias, labore distinctio numquam. Officiis suscipit molestias aspernatur est
-  iure.
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/simplefood.svg" alt="наш логотип" width="200" height="39">
+        </a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active" href="#">Главная
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Блюда
+              </a>
+            </li>
+            <li class="menu__item menu__item--margin">
+              <a class="menu__link" href="#">Контакты
+              </a>
+            </li>
+          </ul>
+          <div class="bar">
+            <a class="bar__link" href="#">
+              <img class="bar__img bar__img--margin" src="images/icons/Search_btn.svg" alt="поиск по сайту">
+              <span class="sr-only">Найти на сайте</span>
+            </a>
+            <a class="bar__link" href="#">
+              <img class="bar__img" src="images/icons/Cart.svg" alt="перейти в корзину">
+              <span class="bar__num">4</span>
+              <span class="sr-only">Перейти в корзину</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__items">
+          <a class="logo" href="#">
+            <img class="logo__img logo__img--margin" src="images/simplefood.svg" alt="наш логотип" width="200"
+              height="39">
+          </a>
+          <form class="footer__form" action="#">
+            <input class="footer__input" type="email" placeholder="Ваш e mail" required id="name" name="name">
+            <span class="sr-only">Ввести и-мейл для рассылки</span>
+            <button class="footer__btn" type="submit">
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="footer__icon"
+                  d="M10.318 14.3001C10.0587 14.3001 9.81927 14.1616 9.70234 13.9406L7.66076 10.0822C7.54864 9.87034 7.5679 9.61684 7.71028 9.42119L11.0058 5.20009L6.53816 8.31359C6.33112 8.44879 6.06285 8.46569 5.83861 8.36039L1.75613 6.43184C1.51125 6.31549 1.36199 6.07304 1.37712 5.81434C1.39156 5.55564 1.56835 5.32944 1.82561 5.24039L14.895 0.690388C15.1461 0.603938 15.4288 0.660488 15.6193 0.840538C15.8092 1.01929 15.8711 1.28709 15.7782 1.52499L10.9632 13.875C10.8683 14.1181 10.6296 14.2851 10.3558 14.2988C10.3434 14.2994 10.3304 14.3001 10.318 14.3001Z"
+                  fill="white" />
+              </svg>Подписаться
+              <span class="sr-only">НАжать и подписаться на рассылку</span></button>
+          </form>
+        </div>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#"> Как это работает
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Продукты
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Блюда
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Меню
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">О нас
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Новости
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Партнеры
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">ЧаВо
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Скачать приложение
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Блог
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Что нового?
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Карта сайта
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__data">
+          <li class="footer__items">
+            <a class="footer__links" href="https://goo.gl/maps/Mi1uqGmtjrpp1Wp96">
+              ул. Т.Г.Шевченко, 1
+            </a>
+          </li>
+          <li class="footer__items">
+            <a class="footer__links" href="tel:+380501112233">
+              380501112233
+            </a>
+          </li>
+          <li class="footer__items">
+            <a class="footer__links" href="mailto:support@sfood.com">
+              support@sfood.com
+            </a>
+          </li>
+          <ul class="socials">
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <!-- <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="19.5" cy="19.5" r="19.5" fill="#ECECEC" />
+                  <path class="socials__icon socials__icon--facebook"
+                    d="M17.5468 29.5263V19.8948H15V16.427H17.5468V13.465C17.5468 11.1374 19.0512 9 22.5176 9C23.9211 9 24.959 9.13455 24.959 9.13455L24.8772 12.3729C24.8772 12.3729 23.8188 12.3626 22.6638 12.3626C21.4137 12.3626 21.2134 12.9387 21.2134 13.8948V16.427H24.9765L24.8128 19.8948H21.2134V29.5263H17.5468Z"
+                    fill="#31352B" />
+                </svg> -->
 
-
-
-  sdbdfndfgnrtnrtnrt
-
-
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur nulla, quasi similique iusto quis recusandae
-  odit, incidunt consequuntur eveniet excepturi odio, aliquam esse voluptatibus in dolore officiis neque et!
-
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+              </a>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
 
 

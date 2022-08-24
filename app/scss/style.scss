@@ -1,11 +1,139 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
-
 @import 'global';
 
+.header {
+  padding: 60px 0 70px 0;
+  line-height: 1;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    margin-right: 44px;
+    font-size: 18px;
+    color: $dark;
+  }
+
+  &__link--active {
+    color: $orange-900;
+  }
+
+  &__item--margin {
+    margin-right: 19px;
+  }
+}
+
+.bar {
+  display: flex;
+
+  &__link {
+    position: relative;
+  }
+
+  &__img--margin {
+    margin-right: 35px;
+  }
+
+  &__num {
+    position: absolute;
+    top: -5px;
+    left: 12px;
+    width: 14px;
+    height: 14px;
+    background-color: $orange-900;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.footer {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 23% 18.9% 13.7% 21.8% 21.9%;
+  }
+
+  &__list {
+    font-size: 18px;
+  }
+
+  &__link {
+    color: $dark;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    display: block;
+    padding: 13px 15px;
+    margin-bottom: 12px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    max-width: 200px;
+    width: 100%;
+    font-size: 14px;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  &__btn {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: none;
+    column-gap: 15px;
+    padding: 13px 38px 13px 39px;
+    border: none;
+    border-radius: 5px;
+    background-color: $orange-900;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  &__items {
+    margin-bottom: 15px;
+  }
+
+  &__links {
+    color: $dark;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+.logo__img--margin {
+  margin-bottom: 30px;
+}
 
 
-
+.socials {
+  &__link {
+    background-color: #1e90ff;
+    mask-image: url('../images/icons/facebook.svg');
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    width: 39px;
+    height: 39px;
+  }
+}
 
 @import 'media';
