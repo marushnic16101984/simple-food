@@ -53,10 +53,13 @@
     </div>
   </header>
 
+  <main class="main">
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
-        <div class="footer__items">
+        <div class="footer__part">
           <a class="logo" href="#">
             <img class="logo__img logo__img--margin" src="images/simplefood.svg" alt="наш логотип" width="200"
               height="39">
@@ -66,10 +69,11 @@
             <span class="sr-only">Ввести и-мейл для рассылки</span>
             <button class="footer__btn" type="submit">
               <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="footer__icon"
+                <path
                   d="M10.318 14.3001C10.0587 14.3001 9.81927 14.1616 9.70234 13.9406L7.66076 10.0822C7.54864 9.87034 7.5679 9.61684 7.71028 9.42119L11.0058 5.20009L6.53816 8.31359C6.33112 8.44879 6.06285 8.46569 5.83861 8.36039L1.75613 6.43184C1.51125 6.31549 1.36199 6.07304 1.37712 5.81434C1.39156 5.55564 1.56835 5.32944 1.82561 5.24039L14.895 0.690388C15.1461 0.603938 15.4288 0.660488 15.6193 0.840538C15.8092 1.01929 15.8711 1.28709 15.7782 1.52499L10.9632 13.875C10.8683 14.1181 10.6296 14.2851 10.3558 14.2988C10.3434 14.2994 10.3304 14.3001 10.318 14.3001Z"
                   fill="white" />
-              </svg>Подписаться
+              </svg>
+              Подписаться
               <span class="sr-only">НАжать и подписаться на рассылку</span></button>
           </form>
         </div>
@@ -129,16 +133,25 @@
         </ul>
         <ul class="footer__data">
           <li class="footer__items">
+            <svg class="footer__svg" width="24" height="24">
+              <use xlink:href="images/sprite.svg#Location"></use>
+            </svg>
             <a class="footer__links" href="https://goo.gl/maps/Mi1uqGmtjrpp1Wp96">
               ул. Т.Г.Шевченко, 1
             </a>
           </li>
           <li class="footer__items">
+            <svg class="footer__svg" width="24" height="24">
+              <use xlink:href="images/sprite.svg#Calling"></use>
+            </svg>
             <a class="footer__links" href="tel:+380501112233">
               380501112233
             </a>
           </li>
           <li class="footer__items">
+            <svg class="footer__svg" width="24" height="24">
+              <use xlink:href="images/sprite.svg#Message"></use>
+            </svg>
             <a class="footer__links" href="mailto:support@sfood.com">
               support@sfood.com
             </a>
@@ -146,25 +159,36 @@
           <ul class="socials">
             <li class="socials__item">
               <a class="socials__link" href="#">
-                <!-- <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="19.5" cy="19.5" r="19.5" fill="#ECECEC" />
-                  <path class="socials__icon socials__icon--facebook"
-                    d="M17.5468 29.5263V19.8948H15V16.427H17.5468V13.465C17.5468 11.1374 19.0512 9 22.5176 9C23.9211 9 24.959 9.13455 24.959 9.13455L24.8772 12.3729C24.8772 12.3729 23.8188 12.3626 22.6638 12.3626C21.4137 12.3626 21.2134 12.9387 21.2134 13.8948V16.427H24.9765L24.8128 19.8948H21.2134V29.5263H17.5468Z"
-                    fill="#31352B" />
-                </svg> -->
-
+                <svg width="10" height="21">
+                  <use xlink:href="images/sprite.svg#facebook"></use>
+                </svg>
+                <span class="sr-only">Нажать и подписаться на рассылку</span>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link" href="#">
+                <svg width="21" height="17">
+                  <use xlink:href=" images/sprite.svg#twitter"></use>
+                </svg>
+                <span class="sr-only">Написать нам в Твиттер</span>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link" href="#">
+                <svg width="19.5" height="19.5">
+                  <use xlink:href="images/sprite.svg#instagram"></use>
+                </svg>
+                <span class="sr-only">Посетить страничку в Инстаграмм</span>
               </a>
             </li>
           </ul>
         </ul>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-bottom__copy">
+          © 2022 Simple Food
+        </p>
+
       </div>
     </div>
   </footer>
