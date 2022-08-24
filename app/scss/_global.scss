@@ -1,12 +1,26 @@
 body {
-  color: $default;
+  @extend %rubic-400;
+  color: $dark;
   font-size: 20px;
-  line-height: 1.5;
-  @extend %rubic-500;
+  line-height: 1.3;
+  background-color: $silver-100;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
