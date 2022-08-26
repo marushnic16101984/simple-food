@@ -25,3 +25,20 @@ $dark: #31352b;
   font-family: 'Rubikit';
   font-weight: 500;
 }
+
+%title {
+  @extend %rubic-500;
+  font-size: 36px;
+  color: $darkBlue-900;
+}
+
+%btn {
+  padding: 7px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: $orange-900;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.3;
+  cursor: pointer;
+}
