@@ -82,17 +82,17 @@ function watching() {
 }
 
 function svgSprites() {
-  return src('app/images/icons/*.svg') // выбираем в папке с иконками все файлы с расширением svg
+  return src('app/images/icons/*.svg')
     .pipe(
       svgSprite({
         mode: {
           stack: {
-            sprite: '../sprite.svg', // указываем имя файла спрайта и путь
+            sprite: '../sprite.svg',
           },
         },
       })
     )
-    .pipe(dest('app/images')); // указываем, в какую папку поместить готовый файл спрайта
+    .pipe(dest('app/images'));
 }
 
 
