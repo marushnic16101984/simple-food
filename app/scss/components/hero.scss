@@ -1,13 +1,16 @@
 .hero {
 
   &__wrapper {
-    display: flex;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 560px 660px;
   }
 
   &__content {
     padding: 154px 0 280px 0px;
     max-width: 459px;
     margin-right: 142px;
+
   }
 
   &__title {
@@ -46,6 +49,5 @@
   &__img {
     width: 560px;
     height: 660px;
-
   }
 }

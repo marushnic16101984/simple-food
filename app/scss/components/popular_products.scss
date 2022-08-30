@@ -1,4 +1,4 @@
-.products {
+.popular {
   &__title {
     text-align: center;
     margin-bottom: 60px;
@@ -19,19 +19,18 @@
     align-items: center;
     outline: transparent;
     transition: all 0.3s;
+    border-color: transparent;
 
     &--active {
       background-color: $orange-900;
 
-      .products__svg {
+      .popular__svg {
         fill: #ffffff;
-
       }
 
-      .products__items {
+      .popular__items {
         color: #ffffff;
       }
-
     }
 
     &:hover {
@@ -39,14 +38,13 @@
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
       background-color: rgba(255, 122, 80, 0.1);
 
-      .products__svg {
+      .popular__svg {
         fill: $orange-900;
       }
 
-      .products__items {
+      .popular__items {
         color: $orange-900;
       }
-
     }
 
     &:focus {
@@ -56,16 +54,14 @@
     &:active {
       box-shadow: inset 0px -5px 12px 4px rgba(255, 104, 56, 0.2);
 
-      .products__svg {
+      .popular__svg {
         fill: $darkBlue-900;
       }
 
-      .products__items {
+      .popular__items {
         color: $darkBlue-900;
       }
-
     }
-
   }
 
   &__items {
@@ -86,7 +82,7 @@
   margin-bottom: 60px;
 
 
-  &__unit {
+  &__card {
     padding: 20px 15px 20px 15px;
     height: 299px;
     max-width: 210px;
@@ -97,18 +93,19 @@
     position: relative;
     transition: box-shadow 0.5s;
 
-    &:hover {
-      box-shadow: 0 0 0 2px $orange-900;
-    }
+
   }
 
 
-  &__link {
+
+
+  &__img {
     display: inline-block;
     width: 140px;
     height: 140px;
     margin-bottom: 10px;
     outline: transparent;
+
   }
 
   &__name {
@@ -116,7 +113,6 @@
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 28px;
-
   }
 
   &__name--margin {
@@ -138,8 +134,17 @@
     bottom: 15px;
 
     &:hover {
-      font-weight: 500;
+      color: $orange-900;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
       background-color: rgba(255, 122, 80, 0.1);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:active {
+      box-shadow: inset 0px -5px 12px 4px rgba(255, 104, 56, 0.2);
     }
   }
 
@@ -151,6 +156,9 @@
     margin-bottom: 30px;
     transition: all 0.3s;
     outline: 0;
+    background-color: transparent;
+    border-color: transparent;
+
 
     &:hover {
       color: $orange-900;
@@ -169,6 +177,5 @@
       box-shadow: none;
       color: #363853;
     }
-
   }
 }

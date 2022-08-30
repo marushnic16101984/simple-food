@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 0 60px;
+    padding: 60px 0 54px;
   }
 }
 
@@ -19,6 +19,7 @@
   &__list {
     display: flex;
     align-items: center;
+    padding-right: 8px;
   }
 
   &__item {
@@ -29,7 +30,7 @@
     font-size: 18px;
     border-radius: 5px;
     outline: transparent;
-    line-height: 1;
+    line-height: 1.2;
 
     &--active {
       color: $orange-900;
@@ -40,7 +41,6 @@
 .logo {
   outline: transparent;
   transition: opacity 0.8s ease, box-shadow 0.8s ease;
-
 
   &:hover {
     opacity: 0.7;
@@ -61,6 +61,8 @@
   display: flex;
   position: relative;
 
+
+
   &__btn {
     display: flex;
     position: relative;
@@ -77,6 +79,7 @@
     height: 44px;
     margin-right: 8px;
     outline: transparent;
+
   }
 
   &__btn--search:after {
@@ -97,15 +100,16 @@
   &__btn--cart:hover {
     background-color: $orange-900;
 
-    .user-nav__num {
-      color: $orange-900;
-      background-color: #ffffff;
-    }
+
+
+
+
   }
 
   &__btn--search:hover::after,
   &__btn--cart:hover::after {
     background-color: #ffffff;
+
   }
 
   &__btn--cart:after {
@@ -117,6 +121,14 @@
     mask-position: center;
     mask-repeat: no-repeat;
     mask-image: url('../images/sprite.svg#icon-cart');
+
+  }
+
+  &:hover {
+    .user-nav__num {
+      background-color: #ffffff;
+      color: $orange-900;
+    }
   }
 
 
@@ -133,5 +145,4 @@
     text-align: center;
     color: #ffffff;
   }
-
 }
