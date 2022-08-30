@@ -1,0 +1,32 @@
+.stay {
+  &__inner {
+    padding: 120px 70px;
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    padding: 58px 0;
+    width: 470px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    font-size: 24px;
+    line-height: 1.5;
+    color: $darkBlue-900;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

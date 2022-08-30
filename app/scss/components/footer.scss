@@ -11,6 +11,7 @@
   &__logo {
     display: block;
     margin-bottom: 30px;
+    width: 210px;
   }
 
   &__icon-frame {
@@ -182,35 +183,8 @@
 
     &:active {
       background-color: #FFF2ED;
-
     }
-
-    // &:hover {
-    //   background-color: $orange-900;
-
-    //   .socials_svg {
-    //     fill: #ffffff;
-    //   }
-    // }
-
-    // &:focus {
-    //   background-color: #FFF2ED;
-    //   box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-    // }
-
-    // &:active {
-    //   background-color: #FFF2ED;
-
-    //   .socials_svg {
-    //     fill: $orange-900;
-    //   }
-    // }
   }
-
-  // &__items {
-  //   position: relative;
-  //   margin-right: 13px;
-  // }
 }
 
 .footer-bottom {
