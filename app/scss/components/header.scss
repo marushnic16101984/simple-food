@@ -78,6 +78,7 @@
     width: 44px;
     height: 44px;
     margin-right: 8px;
+
     outline: transparent;
 
     &--search,
@@ -101,7 +102,7 @@
       }
 
       &:active {
-        background-color: rgba(255, 122, 80, 0.1);
+        background-color: #FFF2ED;
       }
 
       &:active::after {
@@ -109,6 +110,14 @@
       }
     }
   }
+
+  &:hover {
+    .user-nav__num {
+      background-color: #fffff1;
+      color: $orange-900;
+    }
+  }
+
 
   &__btn--search:after {
     content: "";
@@ -131,14 +140,6 @@
     mask-repeat: no-repeat;
     mask-image: url('../images/sprite.svg#icon-cart');
   }
-
-  &:hover {
-    .user-nav__num {
-      background-color: #fffff1;
-      color: $orange-900;
-    }
-  }
-
 
   &__num {
     position: absolute;

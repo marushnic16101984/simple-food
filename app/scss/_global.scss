@@ -53,15 +53,41 @@ body {
   padding: 7px 16px;
   border: transparent;
   border-radius: 5px;
+  border-width: 0;
   background-color: $orange-900;
   font-size: 14px;
   color: #ffffff;
   line-height: 1.3;
   cursor: pointer;
   outline: transparent;
+
+  &:hover {
+    color: $orange-900;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: rgba(255, 122, 80, 0.1);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+
+  &:active {
+    box-shadow: inset 0px -5px 12px 4px rgba(255, 104, 56, 0.2);
+  }
 }
 
 .btn-style {
+  padding: 7px 16px;
+  border: transparent;
+  border-radius: 5px;
+  border-width: 0;
+  background-color: $orange-900;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.3;
+  cursor: pointer;
+  outline: transparent;
+
   &:hover {
     color: $orange-900;
     outline: 2px solid rgba(255, 104, 56, 0.7);
@@ -76,7 +102,7 @@ body {
   }
 
   &:active {
-    background-color: rgba(255, 122, 80, 0.1);
+    background-color: #FFF2ED;
     color: $orange-900;
   }
 }

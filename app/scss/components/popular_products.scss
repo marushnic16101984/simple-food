@@ -9,15 +9,14 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    transform: translate(-9px, -3px);
   }
 
-  &__link {
+  &__btn {
     background-color: #ffffff;
     padding: 13px 32px 13px 32px;
-    border-radius: 5px;
     display: flex;
     align-items: center;
-    outline: transparent;
     transition: all 0.3s;
     border-color: transparent;
 
@@ -34,9 +33,6 @@
     }
 
     &:hover {
-      color: $orange-900;
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      background-color: rgba(255, 122, 80, 0.1);
 
       .popular__svg {
         fill: $orange-900;
@@ -47,12 +43,8 @@
       }
     }
 
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-    }
 
     &:active {
-      box-shadow: inset 0px -5px 12px 4px rgba(255, 104, 56, 0.2);
 
       .popular__svg {
         fill: $darkBlue-900;
@@ -80,6 +72,7 @@
   grid-template-columns: repeat(5, 2fr);
   grid-gap: 30px;
   margin-bottom: 60px;
+  transform: translate(-9px, -3px);
 
 
   &__card {
@@ -92,12 +85,7 @@
     display: block;
     position: relative;
     transition: box-shadow 0.5s;
-
-
   }
-
-
-
 
   &__img {
     display: inline-block;
@@ -128,24 +116,10 @@
     margin-bottom: 10px;
   }
 
-  &__order {
+  &__btn {
     position: absolute;
     left: 55px;
     bottom: 15px;
-
-    &:hover {
-      color: $orange-900;
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      background-color: rgba(255, 122, 80, 0.1);
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-    }
-
-    &:active {
-      box-shadow: inset 0px -5px 12px 4px rgba(255, 104, 56, 0.2);
-    }
   }
 
   &__load {
@@ -158,6 +132,7 @@
     outline: 0;
     background-color: transparent;
     border-color: transparent;
+
 
 
     &:hover {
