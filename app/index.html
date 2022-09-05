@@ -92,7 +92,7 @@
           <h2 class="popular__title title">Популярные категории</h2>
           <ul class="popular__assortment">
             <li class="popular__item">
-              <button class="popular__btn btn popular__btn--active" href="#" type="button">
+              <button class="popular__btn btn" data-filter=".category-a" type="button" data-sort=" random ">
                 <svg class="popular__svg" width="44" height="44">
                   <use xlink:href="images/sprite.svg#icon-category-burger"></use>
                 </svg>
@@ -100,7 +100,7 @@
               </button>
             </li>
             <li class="popular__item">
-              <button class="popular__btn btn" href="#">
+              <button class="popular__btn btn" data-filter=".category-b" type="button">
                 <svg class="popular__svg" width="44" height="44">
                   <use xlink:href="images/sprite.svg#icon-category-pizza"></use>
                 </svg>
@@ -108,7 +108,7 @@
               </button>
             </li>
             <li class="popular__item">
-              <button class="popular__btn btn" href="#">
+              <button class="popular__btn btn" type="button">
                 <svg class="popular__svg" width="44" height="44">
                   <use xlink:href="images/sprite.svg#icon-category-sandvich"></use>
                 </svg>
@@ -116,7 +116,7 @@
               </button>
             </li>
             <li class="popular__item">
-              <button class="popular__btn btn" href="#">
+              <button class="popular__btn btn" type="button">
                 <svg class="popular__svg" width="44" height="44">
                   <use xlink:href="images/sprite.svg#icon-category-asia"></use>
                 </svg>
@@ -124,7 +124,7 @@
               </button>
             </li>
             <li class="popular__item">
-              <button class="popular__btn btn" href="#">
+              <button class="popular__btn btn" type="button">
                 <svg class="popular__svg" width="44" height="44">
                   <use xlink:href="images/sprite.svg#icon-category-dish"></use>
                 </svg>
@@ -134,7 +134,7 @@
           </ul>
           <ul class="product">
             <li class="product__link">
-              <article class="product__card">
+              <article class="product__card mix category-a" data-order="1">
                 <img class="product__img" src="images/products/cheese.jpg" alt="Чизбургер с листьями салата" width="140"
                   height="140">
                 <h3 class="product__name product__name--margin">Чизбургер с листьями салата</h3>
@@ -144,7 +144,7 @@
               </article>
             </li>
             <li class="product__link">
-              <article class="product__card">
+              <article class="product__card mix category-a">
                 <img class="product__img" src="images/products/beaf.jpg" alt="бифбургер" width="140" height="140">
                 <h3 class="product__name">Бифбургер</h3>
                 <span class="product__price">190 грн.</span>
@@ -153,7 +153,7 @@
               </article>
             </li>
             <li class="product__link">
-              <article class="product__card">
+              <article class="product__card mix category-b" data-order=" 2 ">
                 <img class="product__img" src="images/products/king.jpg" alt="королевский гамбургер" width="140"
                   height="140">
                 <h3 class="product__name">Королевский чизбургер</h3>
@@ -163,7 +163,7 @@
               </article>
             </li>
             <li class="product__link">
-              <article class="product__card">
+              <article class="product__card mix category-b">
                 <img class="product__img" src="images/products/black.jpg" alt="черный гамбургер" width="140"
                   height="140">
                 <h3 class="product__name">Черный гамбургер</h3>
@@ -173,7 +173,7 @@
               </article>
             </li>
             <li class="product__link">
-              <article class="product__card">
+              <article class="product__card mix category-c">
                 <img class="product__img" src="images/products/chiken.jpg" alt="чикен бургер" width="140" height="140">
                 <h3 class="product__name">Чикен бургер</h3>
                 <span class="product__price">180 грн.</span>
@@ -466,7 +466,6 @@
       </div>
     </div>
   </footer>
-
   <script src="js/main.min.js"></script>
 </body>
 

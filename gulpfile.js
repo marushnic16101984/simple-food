@@ -35,6 +35,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/mixitup/dist/mixitup.js',
     'app/js/main.js'
   ])
 
@@ -43,6 +44,8 @@ function scripts() {
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
 }
+
+
 
 function images() {
   return src('app/images/**/*.*')

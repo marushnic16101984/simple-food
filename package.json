@@ -10,6 +10,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
+    "mixitup": "^3.3.1",
     "sass": "^1.54.4"
   },
   "name": "start_gulp",
@@ -22,7 +23,6 @@
   "author": "marushak andrey",
   "license": "ISC",
   "dependencies": {
-    "imagemin": "^6.1.0",
-    "mixitup": "^3.3.1"
+    "imagemin": "^6.1.0"
   }
 }
