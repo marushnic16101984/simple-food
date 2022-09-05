@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 156px;
+}
+
 html,
 body {
   height: 100%;
@@ -5,16 +10,17 @@ body {
 
 
 body {
-  @extend %rubic-400;
+  font-family: 'Rubik', 'Arial', 'Helvetica', sans-serif;
   color: $dark;
   font-size: 20px;
   line-height: 1.3;
-  background-color: #e5e5e5;
+  background-color: $silver-100;
   display: flex;
   flex-direction: column;
+  font-weight: 400;
 }
 
-.general {
+.main {
   flex-grow: 1;
 }
 
@@ -38,5 +44,89 @@ body {
 }
 
 .title {
-  @extend %title;
+  font-weight: 500;
+  font-size: 36px;
+  color: $darkBlue-900;
+}
+
+.btn {
+  padding: 7px 16px;
+  border: transparent;
+  border-radius: 5px;
+  border-width: 0;
+  background-color: $orange-900;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.3;
+  cursor: pointer;
+  outline: transparent;
+
+  &:hover {
+    color: $orange-900;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: rgba(255, 122, 80, 0.1);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+
+  &:active {
+    box-shadow: inset 0px -5px 12px 4px rgba(255, 104, 56, 0.2);
+  }
+}
+
+.btn-style {
+  padding: 7px 16px;
+  border: transparent;
+  border-radius: 5px;
+  border-width: 0;
+  background-color: $orange-900;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.3;
+  cursor: pointer;
+  outline: transparent;
+
+  &:hover {
+    color: $orange-900;
+    outline: 2px solid rgba(255, 104, 56, 0.7);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 12px 5px rgba(255, 104, 56, 0.2);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: rgba(255, 122, 80, 0.1);
+    color: $orange-900;
+  }
+
+  &:active {
+    background-color: #FFF2ED;
+    color: $orange-900;
+  }
+}
+
+.link {
+  line-height: 1.5;
+  outline: transparent;
+  transition: box-shadow 0.5s, color 0.3s, text-shadow 0.2s, text-decoration-color 0.2s;
+
+  &:hover {
+    color: $orange-900;
+    text-decoration-color: transparent;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $orange-900;
+    border-radius: 5px;
+    text-decoration-color: transparent;
+    color: $dark;
+  }
+
+  &:active {
+    text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+    box-shadow: none;
+  }
+
 }

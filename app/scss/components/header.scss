@@ -1,0 +1,148 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0 54px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+  }
+
+  &__item {
+    margin-right: 44px;
+  }
+
+  &__link {
+    font-size: 18px;
+    border-radius: 5px;
+    outline: transparent;
+    line-height: 1.2;
+
+    &--active {
+      color: $orange-900;
+    }
+  }
+}
+
+.logo {
+  outline: transparent;
+  transition: opacity 0.8s ease, box-shadow 0.8s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $orange-900;
+    border-radius: 5px;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+
+.user-nav {
+  display: flex;
+  position: relative;
+
+  &__item {
+
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+    width: 44px;
+    height: 44px;
+    margin-right: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $orange-900;
+
+      .user-nav__num {
+        color: $orange-900;
+        background-color: white;
+      }
+
+      .button--img:after {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+
+
+  &__btn {
+    position: relative;
+    display: block;
+    background-color: transparent;
+    padding: 0;
+    outline: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    // &:hover {
+    //   background-color: $orange-900;
+
+
+  }
+
+
+
+  &__btn--cart:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -11px;
+    top: 14px;
+    width: 22px;
+    height: 22px;
+    mask-image: url('../images/sprite.svg#icon-cart');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background-color: #000000;
+    z-index: 19;
+    transform: translate(20px, -4px);
+
+    &:hover {
+      background-color: #ffffff;
+
+
+    }
+  }
+
+
+  &__num {
+    display: inline-block;
+    position: absolute;
+    background-color: rgb(216, 16, 16);
+    font-size: 10px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50px;
+    top: 4px;
+    left: 24px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+  }
+}
