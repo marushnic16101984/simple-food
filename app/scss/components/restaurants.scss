@@ -1,0 +1,52 @@
+.restaurants {
+  &__title {
+    margin-bottom: 45px;
+    text-align: center;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+  }
+
+  &__item {
+    display: block;
+  }
+
+  &__img {}
+
+
+  &__icon {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+  }
+}
+
+
+.section {
+  padding: 100px 0;
+}
+
+.wrapper {
+  display: flex;
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $orange-900;
+
+    .span {
+      color: $orange-900;
+      background-color: #ffffff;
+    }
+
+    .button--img:after {
+      background-color: #ffffff;
+    }
+  }
+}

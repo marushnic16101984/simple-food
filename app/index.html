@@ -41,11 +41,17 @@
             </li>
           </ul>
           <div class="user-nav">
-            <button class="user-nav__btn user-nav__btn--search" type="button"></button>
-            <span class="sr-only">Найти на сайте</span>
-            <button class="user-nav__btn user-nav__btn--cart" type="button"></button>
-            <span class="user-nav__num">4</span>
-            <span class="sr-only">Перейти в корзину</span>
+            <div class="user-nav__item">
+              <button class="user-nav__btn user-nav__btn--search" type="button"></button>
+              <span class="sr-only">Найти на сайте</span>
+            </div>
+            <div class="user-nav__item">
+
+              <button class="user-nav__btn user-nav__btn--cart" type="button">
+                <span class="user-nav__num">4</span>
+              </button>
+              <span class="sr-only">Перейти в корзину</span>
+            </div>
           </div>
         </nav>
       </div>
@@ -128,81 +134,103 @@
             </li>
           </ul>
           <ul class="product">
-            <article class="product__card">
-              <img class="product__img" src="images/products/cheese.jpg" alt="Чизбургер с листьями салата" width="140"
-                height="140">
-              <h3 class="product__name product__name--margin">Чизбургер с листьями салата</h3>
-              <span class="product__price">160 грн.</span>
-              <button class="product__btn btn" type="button">В корзину
-              </button>
-            </article>
-            <article class="product__card">
-              <img class="product__img" src="images/products/beaf.jpg" alt="бифбургер" width="140" height="140">
-              <h3 class="product__name">Бифбургер</h3>
-              <span class="product__price">190 грн.</span>
-              <button class="product__btn btn " type="button">В корзину
-              </button>
-            </article>
-            <article class="product__card">
-              <img class="product__img" src="images/products/king.jpg" alt="королевский гамбургер" width="140"
-                height="140">
-              <h3 class="product__name">Королевский чизбургер</h3>
-              <span class="product__price">260 грн.</span>
-              <button class="product__btn btn " type="button">В корзину
-              </button>
-            </article>
-            <article class="product__card">
-              <img class="product__img" src="images/products/black.jpg" alt="черный гамбургер" width="140" height="140">
-              <h3 class="product__name">Черный гамбургер</h3>
-              <span class="product__price">199 грн.</span>
-              <button class="product__btn btn " type="button">В корзину
-              </button>
-            </article>
-            <article class="product__card">
-              <img class="product__img" src="images/products/chiken.jpg" alt="чикен бургер" width="140" height="140">
-              <h3 class="product__name">Чикен бургер</h3>
-              <span class="product__price">180 грн.</span>
-              <button class="product__btn btn " type="button">В корзину
-              </button>
-            </article>
-            <article class="product__card">
-              <img class="product__img" src="images/products/cheese.jpg" alt="Чизбургер с листьями салата" width="140"
-                height="140">
-              <h3 class="product__name product__name--margin">Чизбургер с листьями салата</h3>
-              <span class="product__price">160 грн.</span>
-              <button class="product__btn btn " type="button">В корзину
-              </button>
-            </article>
-            <article class="product__card">
-              <img class="product__img" src="images/products/beaf.jpg" alt="бифбургер" width="140" height="140">
-              <h3 class="product__name">Бифбургер</h3>
-              <span class="product__price">190 грн.</span>
-              <button class="product__btn btn " type="button">В корзину
-              </button>
-            </article>
-            <article class="product__card">
-              <img class="product__img" src="images/products/king.jpg" alt="королевский гамбургер" width="140"
-                height="140">
-              <h3 class="product__name">Королевский чизбургер</h3>
-              <span class="product__price">260 грн.</span>
-              <button class="product__btn btn " type="button">В корзину
-              </button>
-            </article>
-            <article class="product__card">
-              <img class="product__img" src="images/products/black.jpg" alt="черный гамбургер" width="140" height="140">
-              </a>
-              <h3 class="product__name">Черный гамбургер</h3>
-              <span class="product__price">199 грн.</span>
-              <button class="product__btn btn " type="button">В корзину
-              </button>
-            </article>
-            <article class="product__card">
-              <img class="product__img" src="images/products/chiken.jpg" alt="чикен бургер" width="140" height="140">
-              <h3 class="product__name">Чикен бургер</h3>
-              <span class="product__price">180 грн.</span>
-              <button class="product__ btn " type="button">В корзину
-              </button>
-            </article>
+            <li class="product__link">
+              <article class="product__card">
+                <img class="product__img" src="images/products/cheese.jpg" alt="Чизбургер с листьями салата" width="140"
+                  height="140">
+                <h3 class="product__name product__name--margin">Чизбургер с листьями салата</h3>
+                <span class="product__price">160 грн.</span>
+                <button class="product__btn btn" type="button">В корзину
+                </button>
+              </article>
+            </li>
+            <li class="product__link">
+              <article class="product__card">
+                <img class="product__img" src="images/products/beaf.jpg" alt="бифбургер" width="140" height="140">
+                <h3 class="product__name">Бифбургер</h3>
+                <span class="product__price">190 грн.</span>
+                <button class="product__btn btn " type="button">В корзину
+                </button>
+              </article>
+            </li>
+            <li class="product__link">
+              <article class="product__card">
+                <img class="product__img" src="images/products/king.jpg" alt="королевский гамбургер" width="140"
+                  height="140">
+                <h3 class="product__name">Королевский чизбургер</h3>
+                <span class="product__price">260 грн.</span>
+                <button class="product__btn btn " type="button">В корзину
+                </button>
+              </article>
+            </li>
+            <li class="product__link">
+              <article class="product__card">
+                <img class="product__img" src="images/products/black.jpg" alt="черный гамбургер" width="140"
+                  height="140">
+                <h3 class="product__name">Черный гамбургер</h3>
+                <span class="product__price">199 грн.</span>
+                <button class="product__btn btn " type="button">В корзину
+                </button>
+              </article>
+            </li>
+            <li class="product__link">
+              <article class="product__card">
+                <img class="product__img" src="images/products/chiken.jpg" alt="чикен бургер" width="140" height="140">
+                <h3 class="product__name">Чикен бургер</h3>
+                <span class="product__price">180 грн.</span>
+                <button class="product__btn btn " type="button">В корзину
+                </button>
+              </article>
+            </li>
+            <li class="product__link">
+              <article class="product__card">
+                <img class="product__img" src="images/products/cheese.jpg" alt="Чизбургер с листьями салата" width="140"
+                  height="140">
+                <h3 class="product__name product__name--margin">Чизбургер с листьями салата</h3>
+                <span class="product__price">160 грн.</span>
+                <button class="product__btn btn " type="button">В корзину
+                </button>
+              </article>
+            </li>
+            <li class="product__link">
+              <article class="product__card">
+                <img class="product__img" src="images/products/beaf.jpg" alt="бифбургер" width="140" height="140">
+                <h3 class="product__name">Бифбургер</h3>
+                <span class="product__price">190 грн.</span>
+                <button class="product__btn btn " type="button">В корзину
+                </button>
+              </article>
+            </li>
+            <li class="product__link">
+              <article class="product__card">
+                <img class="product__img" src="images/products/king.jpg" alt="королевский гамбургер" width="140"
+                  height="140">
+                <h3 class="product__name">Королевский чизбургер</h3>
+                <span class="product__price">260 грн.</span>
+                <button class="product__btn btn " type="button">В корзину
+                </button>
+              </article>
+            </li>
+            <li class="product__link">
+              <article class="product__card">
+                <img class="product__img" src="images/products/black.jpg" alt="черный гамбургер" width="140"
+                  height="140">
+                </a>
+                <h3 class="product__name">Черный гамбургер</h3>
+                <span class="product__price">199 грн.</span>
+                <button class="product__btn btn " type="button">В корзину
+                </button>
+              </article>
+            </li>
+            <li class="product__link">
+              <article class="product__card">
+                <img class="product__img" src="images/products/chiken.jpg" alt="чикен бургер" width="140" height="140">
+                <h3 class="product__name">Чикен бургер</h3>
+                <span class="product__price">180 грн.</span>
+                <button class="product__ btn " type="button">В корзину
+                </button>
+              </article>
+            </li>
           </ul>
           <button class="product__load" type="button">
             Показать еще
@@ -234,12 +262,42 @@
                     <p class="stay__item">Более 500 заведений</p>
             </div>
             <button class="stay__btn btn-style" type="button">Подробнее</button>
-
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="restaurants">
+      <div class="container">
+        <h2 class="restaurants__title title">Лучшие рестораны</h2>
+        <div class="restaurants__inner">
+          <ul class="restaurants__names">
+            <li class="restaurants__item">
+              <img class="restaurants__img" src="images/restaurants/blaze.png" alt="ресторан блейз">
+              <h3 class="restaurants__title">Blaze Pizza</h3>
+              <p class="restaurants__text">11:00 - 22:00</p>
+              <a class="restaurants__link" href="https://m.facebook.com/BlazePizza/?locale=ru_RU"></a>
+              <span class="restaurants_icon" style="background-image: url(images/sprite.svg#icon-arrow-right) "></span>
+            </li>
+          </ul>
 
         </div>
       </div>
     </section>
+
+    <!-- <section class="section">
+
+      <div class="container">
+        <div class="wrapper">
+
+          <button class="button button--img" type="button">
+            <span class="span">4</span>
+
+
+          </button>
+        </div>
+      </div>
+    </section> -->
   </main>
 
   <footer class="footer" id="contacts">

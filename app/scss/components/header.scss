@@ -61,97 +61,88 @@
   display: flex;
   position: relative;
 
+  &__item {
+
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+    width: 44px;
+    height: 44px;
+    margin-right: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $orange-900;
+
+      .user-nav__num {
+        color: $orange-900;
+        background-color: white;
+      }
+
+      .button--img:after {
+        background-color: #ffffff;
+      }
+    }
+  }
+
 
 
   &__btn {
-    display: flex;
     position: relative;
-    justify-content: center;
-    align-items: center;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border-radius: 5px;
-    border-width: 0;
+    display: block;
     background-color: transparent;
     padding: 0;
-    cursor: pointer;
-    width: 44px;
-    height: 44px;
-    margin-right: 8px;
-
     outline: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
 
-    &--search,
-    &--cart {
+    // &:hover {
+    //   background-color: $orange-900;
 
-      &:hover {
-        background-color: $orange-900;
-      }
 
-      &:hover::after {
-        background-color: #ffffff;
-      }
-
-      &:focus {
-        background-color: rgba(255, 122, 80, 0.1);
-        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      }
-
-      &:focus::after {
-        background-color: $darkBlue-900;
-      }
-
-      &:active {
-        background-color: #FFF2ED;
-      }
-
-      &:active::after {
-        background-color: $darkBlue-900;
-      }
-    }
-  }
-
-  &:hover {
-    .user-nav__num {
-      background-color: #fffff1;
-      color: $orange-900;
-    }
   }
 
 
-  &__btn--search:after {
-    content: "";
-    background-color: $darkBlue-900;
-    width: 22px;
-    height: 22px;
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-image: url('../images/sprite.svg#search_btn');
-  }
 
   &__btn--cart:after {
     content: "";
-    background-color: $darkBlue-900 ;
+    display: block;
+    position: absolute;
+    left: -11px;
+    top: 14px;
     width: 22px;
     height: 22px;
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
     mask-image: url('../images/sprite.svg#icon-cart');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background-color: #000000;
+    z-index: 19;
+    transform: translate(20px, -4px);
+
+    &:hover {
+      background-color: #ffffff;
+
+
+    }
   }
 
+
   &__num {
+    display: inline-block;
     position: absolute;
-    top: 10px;
-    right: 11px;
+    background-color: rgb(216, 16, 16);
+    font-size: 10px;
     width: 14px;
     height: 14px;
-    background-color: $orange-900;
-    border-radius: 50%;
-    font-size: 10px;
-    line-height: 1.4;
-    text-align: center;
-    color: #ffffff;
+    border-radius: 50px;
+    top: 4px;
+    left: 24px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
   }
 }
