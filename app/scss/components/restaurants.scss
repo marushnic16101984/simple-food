@@ -2,20 +2,44 @@
   &__title {
     margin-bottom: 45px;
     text-align: center;
+    transform: translateX(-15px);
+  }
+
+  &__subtitle {
+    padding-left: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+
   }
 
   &__inner {
+    transform: translateX(-6px);
+    padding-bottom: 120px;
+
+  }
+
+  &__names {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     gap: 30px;
   }
 
-  &__item {
-    display: block;
+  &__img {
+    margin-bottom: 15px;
   }
 
-  &__img {}
+  &__item {
+    display: block;
+    padding-bottom: 11px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.5s;
 
+    &:hover {
+      box-shadow: 0px 3px 3px $orange-900;
+    }
+  }
 
   &__icon {
     display: block;
@@ -24,6 +48,66 @@
     background-size: contain;
     background-color: black;
   }
+
+  &__text {
+    padding-left: 50px;
+    font-weight: 300;
+    opacity: 0.9;
+    line-height: 1.7;
+    font-size: 18px;
+    display: inline-block;
+    transform: translateY(-13px);
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 4px;
+      mask-image: url('../images/sprite.svg#icon-time');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      opacity: 0.9;
+      width: 22px;
+      height: 22px;
+      background-color: #000000;
+
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 79px;
+    height: 33px;
+    background-color: $orange-900;
+    position: relative;
+    border-radius: 20px;
+    transform: translateX(109px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover {
+      transform: translate(121px);
+      box-shadow: 0 3px 10px rgba(246, 141, 70, 0.5)
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 34px;
+      top: 11px;
+      mask-image: url('../images/sprite.svg#icon-arrow-right');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      width: 13px;
+      height: 13px;
+      background-color: #ffffff;
+
+    }
+
+  }
+
+
 }
 
 

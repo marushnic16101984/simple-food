@@ -1,14 +1,16 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   background-color: #ffffff;
+  z-index: 100;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 0 54px;
+    padding: 58px 0 54px;
   }
 }
 
@@ -30,7 +32,6 @@
     font-size: 18px;
     border-radius: 5px;
     outline: transparent;
-    line-height: 1.2;
 
     &--active {
       color: $orange-900;
@@ -68,8 +69,9 @@
     border-radius: 5px;
     width: 44px;
     height: 44px;
-    margin-right: 6px;
+    margin-right: 10px;
     cursor: pointer;
+    transition: all 0.5s ease;
 
     &:hover {
       background-color: $orange-900;
@@ -82,10 +84,16 @@
       .button--img:after {
         background-color: #ffffff;
       }
+
+      .user-nav__btn--cart:after {
+        background-color: #ffffff;
+      }
+
+      .user-nav__btn--search:after {
+        background-color: #ffffff;
+      }
     }
   }
-
-
 
   &__btn {
     position: relative;
@@ -96,13 +104,24 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
-
-    // &:hover {
-    //   background-color: $orange-900;
-
-
   }
 
+  &__btn--search:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -9px;
+    top: 14px;
+    width: 22px;
+    height: 22px;
+    mask-image: url('../images/sprite.svg#icon-search');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background-color: #000000;
+    z-index: 19;
+    transform: translate(20px, -4px);
+  }
 
 
   &__btn--cart:after {
@@ -120,19 +139,13 @@
     background-color: #000000;
     z-index: 19;
     transform: translate(20px, -4px);
-
-    &:hover {
-      background-color: #ffffff;
-
-
-    }
   }
 
 
   &__num {
-    display: inline-block;
+    display: block;
     position: absolute;
-    background-color: rgb(216, 16, 16);
+    background-color: $orange-900;
     font-size: 10px;
     width: 14px;
     height: 14px;
@@ -140,9 +153,10 @@
     top: 4px;
     left: 24px;
     z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #ffffff;
     z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

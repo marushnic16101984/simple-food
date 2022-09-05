@@ -22,6 +22,7 @@
   "author": "marushak andrey",
   "license": "ISC",
   "dependencies": {
-    "imagemin": "^6.1.0"
+    "imagemin": "^6.1.0",
+    "mixitup": "^3.3.1"
   }
 }
