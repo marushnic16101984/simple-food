@@ -1,12 +1,17 @@
 $(function () {
 
+  // $('.top-slider__inner').slick({
+  //   dots: true,
+  //   arrows: false
+  // }
+
+  // )
 
 
+  // $('.menu__item ').on('click', function () {
+  //   $('.menu__link  ').toggleClass('menu__link--active');
 
-  $('.popular__item ').on('click', function () {
-    $('.popular__btn').toggleClass('popular__btn--active');
-
-  });
+  // });
 
   var mixer = mixitup('.product');
 });

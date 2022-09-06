@@ -24,8 +24,8 @@
         </a>
         <nav class="menu id=" main">
           <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link link menu__link--active" href="#main">
+            <li class="menu__item  ">
+              <a class="menu__link link menu__link--active" href="#">
                 Главная
               </a>
             </li>
@@ -34,7 +34,7 @@
                 Блюда
               </a>
             </li>
-            <li class="menu__item menu">
+            <li class="menu__item">
               <a class="menu__link link" href="#contacts">
                 Контакты
               </a>
@@ -92,7 +92,7 @@
           <h2 class="popular__title title">Популярные категории</h2>
           <ul class="popular__assortment">
             <li class="popular__item">
-              <button class="popular__btn btn" data-filter=".category-a" type="button" data-sort=" random ">
+              <button class="popular__btn btn" data-filter=".category-a" type="button">
                 <svg class="popular__svg" width="44" height="44">
                   <use xlink:href="images/sprite.svg#icon-category-burger"></use>
                 </svg>
@@ -108,7 +108,7 @@
               </button>
             </li>
             <li class="popular__item">
-              <button class="popular__btn btn" type="button">
+              <button class="popular__btn btn" type="button" data-filter=".category-c">
                 <svg class="popular__svg" width="44" height="44">
                   <use xlink:href="images/sprite.svg#icon-category-sandvich"></use>
                 </svg>
@@ -116,7 +116,7 @@
               </button>
             </li>
             <li class="popular__item">
-              <button class="popular__btn btn" type="button">
+              <button class="popular__btn btn" type="button" data-filter=".category-d">
                 <svg class="popular__svg" width="44" height="44">
                   <use xlink:href="images/sprite.svg#icon-category-asia"></use>
                 </svg>
@@ -124,7 +124,7 @@
               </button>
             </li>
             <li class="popular__item">
-              <button class="popular__btn btn" type="button">
+              <button class="popular__btn btn" type="button" data-filter=".category-e">
                 <svg class="popular__svg" width="44" height="44">
                   <use xlink:href="images/sprite.svg#icon-category-dish"></use>
                 </svg>
@@ -182,7 +182,7 @@
               </article>
             </li>
             <li class="product__link">
-              <article class="product__card">
+              <article class="product__card mix category-d">
                 <img class="product__img" src="images/products/cheese.jpg" alt="Чизбургер с листьями салата" width="140"
                   height="140">
                 <h3 class="product__name product__name--margin">Чизбургер с листьями салата</h3>
@@ -192,7 +192,7 @@
               </article>
             </li>
             <li class="product__link">
-              <article class="product__card">
+              <article class="product__card mix category-d">
                 <img class="product__img" src="images/products/beaf.jpg" alt="бифбургер" width="140" height="140">
                 <h3 class="product__name">Бифбургер</h3>
                 <span class="product__price">190 грн.</span>
@@ -201,7 +201,7 @@
               </article>
             </li>
             <li class="product__link">
-              <article class="product__card">
+              <article class="product__card mix category-e">
                 <img class="product__img" src="images/products/king.jpg" alt="королевский гамбургер" width="140"
                   height="140">
                 <h3 class="product__name">Королевский чизбургер</h3>
@@ -211,7 +211,7 @@
               </article>
             </li>
             <li class="product__link">
-              <article class="product__card">
+              <article class="product__card mix category-e">
                 <img class="product__img" src="images/products/black.jpg" alt="черный гамбургер" width="140"
                   height="140">
                 </a>
@@ -222,7 +222,7 @@
               </article>
             </li>
             <li class="product__link">
-              <article class="product__card">
+              <article class="product__card mix category-e">
                 <img class="product__img" src="images/products/chiken.jpg" alt="чикен бургер" width="140" height="140">
                 <h3 class="product__name">Чикен бургер</h3>
                 <span class="product__price">180 грн.</span>
@@ -325,6 +325,29 @@
               <span class="restaurants_icon" style="background-image: url(images/sprite.svg#icon-arrow-right) "></span>
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+    <section class="review">
+      <div class="container">
+        <h2 class="review__title title ">Отзывы клиентов</h2>
+        <div class="review__wrapper">
+          <figure class="review__inner">
+            <img class="review__foto" src="images/girl.png" alt="фотография клиента" width="300" height="300">
+            <div class="review__content">
+              <blockquote class="review__quote">
+                SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                приложение. Их
+                доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
+                однозначно
+                рекомендую!
+              </blockquote>
+              <figcaption class="review__name">
+                Дарья
+              </figcaption>
+              <p class="review__text">Ценитель вкусной еды</p>
+            </div>
+          </figure>
         </div>
       </div>
     </section>

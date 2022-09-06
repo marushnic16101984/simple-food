@@ -2,7 +2,6 @@
   padding-bottom: 23px;
 
   &__title {
-    text-align: center;
     margin-bottom: 63px;
   }
 
@@ -21,18 +20,6 @@
     align-items: center;
     transition: all 0.3s;
     border-color: transparent;
-
-    &--active {
-      background-color: $orange-900;
-
-      .popular__svg {
-        fill: #ffffff;
-      }
-
-      .popular__items {
-        color: #ffffff;
-      }
-    }
 
     &:hover {
 
@@ -66,6 +53,18 @@
     display: inline-block;
     justify-content: space-between;
     padding-left: 10px;
+  }
+}
+
+.mixitup-control-active {
+  background-color: $orange-900;
+
+  .popular__svg {
+    fill: #ffffff;
+  }
+
+  .popular__items {
+    color: #ffffff;
   }
 }
 
@@ -136,6 +135,7 @@
     outline: 0;
     background-color: transparent;
     border-color: transparent;
+    cursor: pointer;
 
 
 

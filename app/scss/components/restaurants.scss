@@ -1,7 +1,6 @@
 .restaurants {
   &__title {
     margin-bottom: 45px;
-    text-align: center;
     transform: translateX(-15px);
   }
 
@@ -51,6 +50,7 @@
 
   &__text {
     padding-left: 50px;
+    margin-right: 101px;
     font-weight: 300;
     opacity: 0.9;
     line-height: 1.7;
@@ -82,11 +82,10 @@
     background-color: $orange-900;
     position: relative;
     border-radius: 20px;
-    transform: translateX(109px);
     transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &:hover {
-      transform: translate(121px);
+      transform: translatex(20px);
       box-shadow: 0 3px 10px rgba(246, 141, 70, 0.5)
     }
 

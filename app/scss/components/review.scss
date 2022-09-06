@@ -1,0 +1,71 @@
+.review {
+  display: flex;
+  justify-content: center;
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__foto {
+    border-radius: 50%;
+    margin-right: 40px;
+
+  }
+
+  &__inner {
+
+    display: flex;
+  }
+
+  &__content {
+    max-width: 650px;
+    padding: 30px 44px 30px 40px;
+  }
+
+  &__quote {
+    position: relative;
+    line-height: 1.5;
+    font-style: italic;
+
+    &:before {
+      content: "";
+      left: -48px;
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      mask-image: url('../images/sprite.svg#icon-quote-open');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      background-color: #C2C2C2;
+    }
+
+    &:after {
+      content: "";
+      right: -37px;
+      bottom: -4px;
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      mask-image: url('../images/sprite.svg#icon-quote-close');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      background-color: #C2C2C2;
+    }
+
+  }
+
+  &__name {
+    padding: 30px 0 15px;
+    font-weight: 500;
+    color: $orange-900;
+
+  }
+
+  &__text {
+    padding-bottom: 78px;
+    font-size: 14px;
+
+  }
+}
