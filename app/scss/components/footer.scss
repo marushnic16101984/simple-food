@@ -98,6 +98,7 @@
   &__link {
     text-decoration: none;
     line-height: 1.3;
+    outline: transparent;
   }
 
   &__items {
@@ -152,6 +153,7 @@
     width: 39px;
     height: 39px;
     transition: all 0.5s;
+    outline: transparent;
 
     &:hover {
       filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);

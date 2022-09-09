@@ -117,13 +117,7 @@
     font-size: 15px;
     line-height: 1.4;
     color: $darkBlue-900;
-    margin-bottom: 10px;
-  }
-
-  &__btn {
-    position: absolute;
-    left: 55px;
-    bottom: 15px;
+    margin-bottom: 5px;
   }
 
   &__load {
@@ -136,6 +130,7 @@
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
+    margin-bottom: 3px;
 
 
 

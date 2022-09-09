@@ -1,0 +1,41 @@
+.load {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 130px;
+  }
+
+  &__content {
+    padding-top: 50px;
+  }
+
+  &__title {
+    text-align: left;
+    max-width: 375px;
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    line-height: 1.5;
+    opacity: 0.9;
+    max-width: 538px;
+    margin-bottom: 30px;
+  }
+
+  &__link--app {
+    display: inline-block;
+    background-image: url('../images/appstore.png');
+    width: 120px;
+    height: 40px;
+    margin-right: 30px;
+
+  }
+
+  &__link--google {
+    display: inline-block;
+    background-image: url('../images/google.png');
+    width: 135px;
+    height: 40px;
+
+  }
+}

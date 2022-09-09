@@ -1,11 +1,10 @@
 $(function () {
 
-  // $('.top-slider__inner').slick({
-  //   dots: true,
-  //   arrows: false
-  // }
+  $('.review__wrapper').slick({
+    dots: true
+  }
 
-  // )
+  )
 
 
   // $('.menu__item ').on('click', function () {

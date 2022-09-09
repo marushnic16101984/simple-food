@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 @import 'components/header';
 @import 'components/footer';
@@ -9,3 +10,4 @@
 @import 'components/stay';
 @import 'components/restaurants';
 @import 'components/review';
+@import 'components/load';
