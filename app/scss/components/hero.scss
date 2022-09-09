@@ -4,12 +4,14 @@
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 560px 660px;
+    padding-bottom: 117px;
   }
 
   &__content {
-    padding: 154px 0 280px 0px;
+    padding: 159px 0;
     max-width: 459px;
     margin-right: 142px;
+    transform: translateX(-5px);
 
   }
 

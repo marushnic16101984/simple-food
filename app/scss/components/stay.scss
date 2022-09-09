@@ -1,6 +1,7 @@
 .stay {
+
   &__inner {
-    padding: 120px 70px;
+    padding: 120px 70px 147px;
     background-size: 440px 585px;
     background-repeat: no-repeat;
     background-position: 62px 92px;
@@ -14,11 +15,13 @@
 
   &__title {
     display: block;
+    text-align: left;
   }
 
   &__subtitle {
     display: block;
     margin-bottom: 30px;
+    text-align: left;
 
   }
 
