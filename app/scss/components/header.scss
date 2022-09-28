@@ -61,6 +61,7 @@
 .user-nav {
   display: flex;
   position: relative;
+  transition: all 0.3s;
 
   &__item {
 
@@ -202,5 +203,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s;
   }
 }
