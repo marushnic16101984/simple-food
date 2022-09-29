@@ -1,19 +1,25 @@
-//Desktop first
+//Desktop first small devise and upper выше
 
 @mixin sm-u {
-  @media (min-width: map-get ($breakpoints, sm)) {
+  @media (min-width: map-get($breakpoints, sm)) {
     @content;
   }
 }
 
 @mixin md-u {
-  @media (min-width: map-get ($breakpoints, md)) {
+  @media (min-width: map-get($breakpoints, md)) {
     @content;
   }
 }
 
 @mixin lg-u {
-  @media (min-width: map-get ($breakpoints, lg)) {
+  @media (min-width: map-get($breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin xl-u {
+  @media (min-width: map-get($breakpoints, xl)) {
     @content;
   }
 }
@@ -44,22 +50,28 @@
   }
 }
 
-//mobile first
+//mobile first down - ниже
 
-@mixin lg-d {
-  @media (max-width:map-get($breakpoints, xl) - .2px) {
+@mixin sm-d {
+  @media (max-width:map-get($breakpoints, sm) - .2px) {
     @content;
   }
 }
 
 @mixin md-d {
+  @media (max-width:map-get($breakpoints, md) - .2px) {
+    @content;
+  }
+}
+
+@mixin lg-d {
   @media (max-width:map-get($breakpoints, lg) - .2px) {
     @content;
   }
 }
 
-@mixin sm-d {
-  @media (max-width:map-get($breakpoints, md) - .2px) {
+@mixin xl-d {
+  @media (max-width:map-get($breakpoints, xl) - .2px) {
     @content;
   }
 }

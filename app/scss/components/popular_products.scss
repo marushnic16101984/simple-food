@@ -21,6 +21,10 @@
     transition: all 0.3s;
     border-color: transparent;
 
+    @include xl-d {
+      padding: 10px 15px 10px 15px;
+    }
+
     &:hover {
 
       .popular__svg {
@@ -109,6 +113,12 @@
 
   &__name--margin {
     margin-bottom: 10px;
+  }
+
+  &__name--media {
+    @include xl-d {
+      margin-bottom: 10px;
+    }
   }
 
   &__price {

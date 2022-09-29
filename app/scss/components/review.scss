@@ -68,6 +68,10 @@
     justify-content: center;
     transform: translateX(-8px);
 
+    @include xl-d {
+      position: relative;
+    }
+
 
     li {
       width: 15px;
@@ -109,6 +113,11 @@
     position: relative;
     cursor: pointer;
     z-index: 1;
+
+    @include xl-d {
+      left: 280px;
+
+    }
 
     &:hover {
       background-color: #FFF2ED;
@@ -155,6 +164,14 @@
     position: relative;
     cursor: pointer;
     z-index: 1;
+
+    @include xl-d {
+      left: auto;
+      right: 280px;
+      position: absolute;
+      top: 394px;
+
+    }
 
     &:hover {
       background-color: #FFF2ED;
