@@ -6,11 +6,78 @@
   background-color: #ffffff;
   z-index: 100;
 
+  @include md-d {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 100%;
+      background-color: #ccffff;
+      z-index: 5;
+      border-bottom: 1px solid #EEEFF3;
+      transform: translateX(-700px);
+    }
+  }
+
+  &--active:before {
+    @include md-d {
+      transform: translateX(-1px)
+    }
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 58px 0 54px;
+
+    @include lg-d {
+      height: 90px;
+
+    }
+  }
+
+  &__burger {
+    display: none;
+    z-index: 6;
+
+    @include sm-d {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      left: 50px;
+
+
+      &::before,
+      &::after {
+        content: "";
+        background-color: #000000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+  }
+
+  &__span {
+    position: absolute;
+    background-color: #000000;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
   }
 }
 
@@ -18,14 +85,34 @@
   display: flex;
   justify-content: space-between;
 
+  @include md-d {
+    // position: fixed;
+    // left: 0;
+    // top: 0;
+    // width: 80%;
+    // height: 100%;
+    // background-color: #ffffff;
+
+  }
+
   &__list {
     display: flex;
     align-items: center;
     padding-right: 8px;
+    z-index: 6;
+
+    @include md-d {
+      // display: block;
+      // padding: 150px 20px;
+    }
   }
 
   &__item {
     margin-right: 44px;
+
+    @include md-d {
+      margin-right: 30px;
+    }
   }
 
   &__link {
@@ -42,6 +129,14 @@
 .logo {
   outline: transparent;
   transition: opacity 0.8s ease, box-shadow 0.8s ease;
+
+  @include md-d {
+    margin-right: 20px;
+  }
+
+  @include sm-d {
+    z-index: 50;
+  }
 
   &:hover {
     opacity: 0.7;
@@ -73,6 +168,10 @@
     margin-right: 10px;
     cursor: pointer;
     transition: all 0.5s ease;
+
+    @include md-d {
+      margin-right: 20px;
+    }
 
     &:hover {
       background-color: $orange-900;

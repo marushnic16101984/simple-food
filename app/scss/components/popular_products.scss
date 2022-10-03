@@ -11,6 +11,11 @@
     justify-content: space-between;
     margin-bottom: 45px;
     transform: translate(-9px, -3px);
+
+    @include md-d {
+      flex-wrap: wrap;
+      padding: 0 30px;
+    }
   }
 
   &__btn {
@@ -23,6 +28,7 @@
 
     @include xl-d {
       padding: 10px 15px 10px 15px;
+      margin-bottom: 10px;
     }
 
     &:hover {
@@ -79,6 +85,13 @@
   margin-bottom: 57px;
   transform: translate(-9px, -3px);
 
+  @include md-d {
+    grid-template-columns: repeat(3, 4fr);
+    margin-left: 30px;
+    margin-bottom: 10px;
+
+  }
+
 
   &__card {
     padding: 20px 15px 20px 15px;
@@ -90,6 +103,10 @@
     display: block;
     position: relative;
     transition: box-shadow 0.5s;
+
+    @include md-d {
+      max-width: 300px;
+    }
 
     &:hover {
       box-shadow: 0 0 0 1px $orange-900;

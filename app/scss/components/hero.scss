@@ -1,4 +1,20 @@
 .hero {
+  @include md-d {
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 80%;
+    //   height: 100%;
+    //   background-color: #ccffff;
+    //   z-index: 5;
+    //   border-bottom: 1px solid #EEEFF3;
+    //   transform: translateX(-700px);
+    // }
+  }
+
+  padding-top: 110px;
 
 
   &__wrapper {
@@ -6,13 +22,34 @@
     background-position: right top;
     background-size: 560px 660px;
     padding-bottom: 117px;
+    position: relative;
+    z-index: -2;
+
+    @include lg-d {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(249, 250, 255, 0.85);
+        z-index: -1;
+      }
+    }
+
+    @include md-d {
+      padding-bottom: 50px;
+    }
+
+
   }
 
   &__content {
     padding: 159px 0;
     max-width: 459px;
     margin-right: 142px;
-    transform: translateX(-5px);
+
 
   }
 

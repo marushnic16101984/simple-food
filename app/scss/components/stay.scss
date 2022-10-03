@@ -5,10 +5,28 @@
     background-size: 440px 585px;
     background-repeat: no-repeat;
     background-position: 62px 92px;
+    position: relative;
+    z-index: -2;
 
     @include xl-d {
       background-size: 400px 500px;
       padding: 90px 40px 40px;
+    }
+
+    @include md-d {
+      padding-top: 30px;
+      background-position: 12px 38px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(249, 250, 255, 0.85);
+        z-index: -1;
+      }
     }
   }
 
@@ -21,6 +39,10 @@
       padding-top: 0;
       padding-bottom: 100px;
       padding-left: 50px;
+    }
+
+    @include md-d {
+      padding-bottom: 30px;
     }
   }
 

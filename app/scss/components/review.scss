@@ -1,6 +1,10 @@
 .review {
   &__wrapper {
     padding: 7px 0 123px;
+
+    @include md-d {
+      padding-bottom: 50px;
+    }
   }
 
   &__foto {
@@ -17,12 +21,24 @@
   &__content {
     max-width: 650px;
     padding: 30px 44px 30px 31px;
+
+    @include lg-d {
+      padding: 15px 30px 15px 15px;
+    }
   }
 
   &__quote {
     position: relative;
     line-height: 1.5;
     font-style: italic;
+
+    @include lg-d {
+      font-size: 18px;
+    }
+
+    @include md-d {
+      font-size: 16px;
+    }
 
     &:before {
       content: "";
@@ -49,6 +65,10 @@
       mask-position: center;
       mask-size: contain;
       background-color: #C2C2C2;
+
+      @include md-d {
+        right: -19px;
+      }
     }
   }
 
@@ -56,11 +76,19 @@
     padding: 30px 0 15px;
     font-weight: 500;
     color: $orange-900;
+
+    @include lg-d {
+      padding: 10px 0 5px;
+    }
   }
 
   &__text {
     padding-bottom: 20px;
     font-size: 14px;
+
+    @include md-d {
+      padding-bottom: 10px;
+    }
   }
 
   .slick-dots {
@@ -70,6 +98,10 @@
 
     @include xl-d {
       position: relative;
+    }
+
+    @include md-d {
+      display: none;
     }
 
 
@@ -115,8 +147,11 @@
     z-index: 1;
 
     @include xl-d {
-      left: 280px;
+      left: 235px;
+    }
 
+    @include md-d {
+      display: none;
     }
 
     &:hover {
@@ -170,7 +205,6 @@
       right: 280px;
       position: absolute;
       top: 394px;
-
     }
 
     &:hover {

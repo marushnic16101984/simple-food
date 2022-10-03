@@ -15,12 +15,20 @@
     transform: translateX(-6px);
     padding-bottom: 120px;
 
+    @include md-d {
+      padding-bottom: 50px;
+    }
+
   }
 
   &__names {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     gap: 30px;
+
+    @include md-d {
+      grid-template-columns: repeat(2, 3fr);
+    }
   }
 
   &__img {
