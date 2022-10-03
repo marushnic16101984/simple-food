@@ -101,7 +101,7 @@
     }
 
     @include md-d {
-      display: none;
+      // display: none;
     }
 
 
@@ -146,14 +146,6 @@
     cursor: pointer;
     z-index: 1;
 
-    @include xl-d {
-      left: 235px;
-    }
-
-    @include md-d {
-      display: none;
-    }
-
     &:hover {
       background-color: #FFF2ED;
       border: 3px solid #FFAE94;
@@ -191,6 +183,15 @@
       top: 4px;
       z-index: -1;
     }
+
+    @include xl-d {
+      left: 235px;
+    }
+
+    @include md-d {
+      transform: translateX(-800px);
+      overflow: hidden;
+    }
   }
 
   .slick-next {
@@ -205,6 +206,11 @@
       right: 280px;
       position: absolute;
       top: 394px;
+    }
+
+    @include md-d {
+      transform: translateX(-800px);
+      overflow: hidden;
     }
 
     &:hover {

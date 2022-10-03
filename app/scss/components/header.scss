@@ -6,26 +6,26 @@
   background-color: #ffffff;
   z-index: 100;
 
-  @include md-d {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 80%;
-      height: 100%;
-      background-color: #ccffff;
-      z-index: 5;
-      border-bottom: 1px solid #EEEFF3;
-      transform: translateX(-700px);
-    }
-  }
+  // @include sm-d {
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 80%;
+  //     height: 100%;
+  //     background-color: #ccffff;
+  //     z-index: 5;
+  //     border-bottom: 1px solid #EEEFF3;
+  //     transform: translateX(-700px);
+  //   }
+  // }
 
-  &--active:before {
-    @include md-d {
-      transform: translateX(-1px)
-    }
-  }
+  // &--active:before {
+  //   @include sm-d {
+  //     transform: translateX(-1px);
+  //   }
+  // }
 
   &__wrapper {
     display: flex;
@@ -34,50 +34,9 @@
     padding: 58px 0 54px;
 
     @include lg-d {
-      height: 90px;
-
+      padding: 30px 0 30px;
+      justify-content: flex-start;
     }
-  }
-
-  &__burger {
-    display: none;
-    z-index: 6;
-
-    @include sm-d {
-      display: block;
-      position: relative;
-      width: 30px;
-      height: 20px;
-      left: 50px;
-
-
-      &::before,
-      &::after {
-        content: "";
-        background-color: #000000;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        left: 0;
-      }
-
-      &::before {
-        top: 0;
-      }
-
-      &::after {
-        bottom: 0;
-      }
-    }
-  }
-
-  &__span {
-    position: absolute;
-    background-color: #000000;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: 9px;
   }
 }
 
@@ -85,33 +44,44 @@
   display: flex;
   justify-content: space-between;
 
-  @include md-d {
-    // position: fixed;
-    // left: 0;
-    // top: 0;
-    // width: 80%;
-    // height: 100%;
-    // background-color: #ffffff;
-
-  }
-
   &__list {
     display: flex;
     align-items: center;
     padding-right: 8px;
     z-index: 6;
 
-    @include md-d {
-      // display: block;
-      // padding: 150px 20px;
+    @include lg-d {
+      padding: 0 150px 0 150px;
     }
+
+    @include md-d {
+      padding: 0 50px 0 50px;
+    }
+
+    @include sm-d {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 55%;
+      height: 100%;
+      background-color: #461414;
+      padding: 114px 0 0 20px;
+      transform: translateX(-800px);
+      transition: all 0.3s ease;
+    }
+
+    &--active {
+      transform: translateX(0px);
+    }
+
   }
 
   &__item {
     margin-right: 44px;
 
-    @include md-d {
-      margin-right: 30px;
+    @include sm-d {
+      margin-bottom: 20px;
     }
   }
 
@@ -131,10 +101,6 @@
   transition: opacity 0.8s ease, box-shadow 0.8s ease;
 
   @include md-d {
-    margin-right: 20px;
-  }
-
-  @include sm-d {
     z-index: 50;
   }
 
@@ -157,6 +123,18 @@
   display: flex;
   position: relative;
   transition: all 0.3s;
+  z-index: 4;
+
+  // @include md-d {
+  //   position: absolute;
+  //   top: 30px;
+  //   right: 30px;
+
+  // }
+
+  // @include sm-d {
+  //   display: block;
+  // }
 
   &__item {
 
@@ -168,10 +146,6 @@
     margin-right: 10px;
     cursor: pointer;
     transition: all 0.5s ease;
-
-    @include md-d {
-      margin-right: 20px;
-    }
 
     &:hover {
       background-color: $orange-900;
@@ -303,5 +277,51 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
+  }
+}
+
+
+
+.burger {
+  display: none;
+  position: relative;
+  z-index: 6;
+
+  @include sm-d {
+    display: block;
+    width: 30px;
+    height: 20px;
+    top: 11px;
+    right: -15px;
+
+
+
+    &::before,
+    &::after {
+      content: "";
+      background-color: #000000;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+
+  &__span {
+    position: absolute;
+    background-color: #000000;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
   }
 }

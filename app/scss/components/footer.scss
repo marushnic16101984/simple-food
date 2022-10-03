@@ -7,8 +7,17 @@
     padding-bottom: 51px;
     border-bottom: 1px solid $gray;
 
+    @include lg-d {
+      grid-template-columns: 25% 20% 28% 27%;
+    }
+
     @include md-d {
-      grid-template-columns: 25% 20% 25% 30%;
+      column-gap: 100px;
+      row-gap: 30px;
+    }
+
+    @include sm-d {
+      column-gap: 70px;
     }
   }
 
@@ -30,13 +39,13 @@
     margin-bottom: 20px;
   }
 
-  // &__adress {
-  //   @include md-d {
-  //     grid-row-start: 1;
-  //     grid-column-start: 4;
-  //     grid-column-end: 6;
-  //   }
-  // }
+  &__adress {
+    @include md-d {
+      grid-row-start: 1;
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+  }
 
   &__input {
     display: block;
@@ -106,9 +115,14 @@
   &__part {
     margin-bottom: 15px;
 
-    @include md-d {
+    @include lg-d {
       grid-column-start: 1;
       grid-column-end: 5;
+    }
+
+    @include md-d {
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
   }
 

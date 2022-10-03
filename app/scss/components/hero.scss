@@ -1,20 +1,30 @@
 .hero {
-  @include md-d {
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 80%;
-    //   height: 100%;
-    //   background-color: #ccffff;
-    //   z-index: 5;
-    //   border-bottom: 1px solid #EEEFF3;
-    //   transform: translateX(-700px);
-    // }
-  }
+  position: relative;
+  padding-top: 155px;
 
-  padding-top: 110px;
+  // @include sm-d {
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 80%;
+  //     height: 100%;
+  //     background-color: #d43737;
+  //     z-index: 5;
+  //     border-bottom: 1px solid #EEEFF3;
+  //     transform: translateX(-700px);
+  //     transition: all 0.3s ease;
+  //   }
+
+  //   &--active:before {
+  //     @include sm-d {
+  //       transform: translateX(0px)
+  //     }
+  //   }
+  // }
+
+
 
 
   &__wrapper {
@@ -42,6 +52,10 @@
       padding-bottom: 50px;
     }
 
+    @include sm-d {
+      background-size: 240px 290px;
+    }
+
 
   }
 
@@ -50,7 +64,9 @@
     max-width: 459px;
     margin-right: 142px;
 
-
+    @include sm-d {
+      // max-width: 280px;
+    }
   }
 
   &__title {
@@ -61,15 +77,30 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     display: block;
+
+    @include sm-d {
+      font-size: 40px;
+      max-width: 280px;
+    }
   }
 
   &__subtitle {
     color: $orange-900;
+
+    @include sm-d {
+      font-size: 40px;
+      max-width: 500px;
+    }
   }
 
   &__text {
     line-height: 1.5;
     margin-bottom: 20px;
+
+    @include sm-d {
+      font-size: 16px;
+      width: 310px;
+    }
   }
 
   &__btn {

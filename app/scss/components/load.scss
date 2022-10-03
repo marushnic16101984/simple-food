@@ -7,6 +7,7 @@
     @include md-d {
       display: block;
       margin-bottom: 50px;
+      padding-top: 20px;
     }
   }
 
@@ -21,8 +22,6 @@
         display: none;
       }
     }
-
-
   }
 
   &__content {
@@ -44,6 +43,7 @@
 
     @include md-d {
       max-width: 100%;
+      display: inline-block;
     }
   }
 
