@@ -4,9 +4,13 @@
     justify-content: space-between;
     margin-bottom: 130px;
 
+    @include lg-d {
+      margin-bottom: 100px;
+    }
+
     @include md-d {
       display: block;
-      margin-bottom: 50px;
+      margin-bottom: 70px;
       padding-top: 20px;
     }
   }

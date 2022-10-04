@@ -13,7 +13,8 @@
       padding: 90px 40px 40px;
     }
 
-    @include md-d {
+
+    @include lg-d {
       padding-top: 30px;
       background-position: 12px 38px;
 
@@ -41,6 +42,10 @@
       padding-left: 50px;
     }
 
+    @include lg-d {
+      width: 600px;
+    }
+
     @include md-d {
       padding-bottom: 30px;
     }
@@ -61,6 +66,10 @@
     line-height: 1.5;
     margin-bottom: 30px;
     max-width: 450px;
+
+    @include lg-d {
+      max-width: 600px;
+    }
   }
 
   &__benefit {

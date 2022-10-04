@@ -208,6 +208,13 @@
       top: 394px;
     }
 
+    @include lg-d {
+      left: auto;
+      right: 250px;
+      position: absolute;
+      top: 394px;
+    }
+
     @include md-d {
       transform: translateX(-800px);
       overflow: hidden;

@@ -3,6 +3,10 @@
 
   &__title {
     margin-bottom: 63px;
+
+    @include sm-d {
+      margin-bottom: 25px;
+    }
   }
 
   &__assortment {
@@ -12,7 +16,7 @@
     margin-bottom: 45px;
     transform: translate(-9px, -3px);
 
-    @include md-d {
+    @include lg-d {
       flex-wrap: wrap;
       padding: 0 30px;
     }
@@ -64,7 +68,16 @@
     justify-content: space-between;
     padding-left: 10px;
   }
+
+  // &__svg {
+  //   @include md {
+  //     width: 30px;
+  //     height: 30px;
+  //   }
+  // }
 }
+
+
 
 .mixitup-control-active {
   background-color: $orange-900;
@@ -81,14 +94,27 @@
 .product {
   display: grid;
   grid-template-columns: repeat(5, 2fr);
-  grid-gap: 30px;
+  gap: 30px;
   margin-bottom: 57px;
   transform: translate(-9px, -3px);
 
+  @include lg-d {
+    grid-template-columns: repeat(4, 3fr);
+    grid-column: 30px;
+    grid-row: 30px;
+  }
+
   @include md-d {
     grid-template-columns: repeat(3, 4fr);
-    margin-left: 30px;
-    margin-bottom: 10px;
+    grid-column: 30px;
+    grid-row: 30px;
+
+  }
+
+  @include sm-d {
+    grid-template-columns: repeat(2, 5fr);
+    grid-column: 30px;
+    grid-row: 30px;
 
   }
 
@@ -103,6 +129,10 @@
     display: block;
     position: relative;
     transition: box-shadow 0.5s;
+
+    @include lg-d {
+      padding: 15px 10px 15px 10px;
+    }
 
     @include md-d {
       max-width: 300px;

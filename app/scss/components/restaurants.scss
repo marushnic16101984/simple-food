@@ -15,6 +15,10 @@
     transform: translateX(-6px);
     padding-bottom: 120px;
 
+    @include lg-d {
+      padding-bottom: 70px;
+    }
+
     @include md-d {
       padding-bottom: 50px;
     }

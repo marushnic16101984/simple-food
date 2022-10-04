@@ -37,6 +37,10 @@
       padding: 30px 0 30px;
       justify-content: flex-start;
     }
+
+    @include sm-d {
+      padding: 10px 0 10px;
+    }
   }
 }
 
@@ -51,11 +55,12 @@
     z-index: 6;
 
     @include lg-d {
-      padding: 0 150px 0 150px;
+      padding: 0 80px 0 80px;
     }
 
     @include md-d {
-      padding: 0 50px 0 50px;
+      padding: 0 100px 0 100px;
+
     }
 
     @include sm-d {
@@ -63,25 +68,30 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 55%;
+      width: 80%;
       height: 100%;
-      background-color: #461414;
-      padding: 114px 0 0 20px;
-      transform: translateX(-800px);
+      background-color: #ffffff;
+      padding: 110px 0 0 14px;
+      // transform: translateX(-800px);
       transition: all 0.3s ease;
+      display: none;
     }
 
-    &--active {
-      transform: translateX(0px);
-    }
+    // &--active {
+    //   transform: translateX(0px);
+    // }
 
   }
 
   &__item {
     margin-right: 44px;
 
+    @include md-d {
+      margin-right: 20px;
+    }
+
     @include sm-d {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
   }
 
@@ -118,6 +128,22 @@
   }
 }
 
+.logo__img {
+  width: 100%;
+
+  @include sm-d {
+    width: 116px;
+    height: 23px;
+  }
+}
+
+.logo__img--active {
+  @include sm-d {
+    width: 200px;
+    height: 39px;
+  }
+
+}
 
 .user-nav {
   display: flex;
@@ -125,19 +151,17 @@
   transition: all 0.3s;
   z-index: 4;
 
-  // @include md-d {
-  //   position: absolute;
-  //   top: 30px;
-  //   right: 30px;
+  @include sm-d {
+    padding-left: 100px;
 
+  }
+
+  // @include as-d {
+  //   padding-left: 10px;
   // }
 
-  // @include sm-d {
-  //   display: block;
-  // }
 
   &__item {
-
     display: inline-block;
     position: relative;
     border-radius: 5px;
@@ -146,6 +170,14 @@
     margin-right: 10px;
     cursor: pointer;
     transition: all 0.5s ease;
+
+    @include md-d {
+      margin-right: 30px;
+    }
+
+    @include sm-d {
+      margin-right: 5px;
+    }
 
     &:hover {
       background-color: $orange-900;
@@ -241,7 +273,6 @@
     transform: translate(20px, -4px);
   }
 
-
   &__btn--cart:after {
     content: "";
     display: block;
@@ -258,7 +289,6 @@
     z-index: 19;
     transform: translate(20px, -4px);
   }
-
 
   &__num {
     display: block;
@@ -282,46 +312,167 @@
 
 
 
-.burger {
-  display: none;
-  position: relative;
-  z-index: 6;
+// .burger {
+//   display: none;
+//   position: relative;
+//   z-index: 6;
 
+//   @include sm-d {
+//     display: block;
+//     width: 30px;
+//     height: 20px;
+//     top: 11px;
+//     right: -15px;
+
+
+
+//     &::before,
+//     &::after {
+//       content: "";
+//       background-color: #000000;
+//       position: absolute;
+//       width: 100%;
+//       height: 2px;
+//       left: 0;
+//     }
+
+//     &::before {
+//       top: 0;
+//     }
+
+//     &::after {
+//       bottom: 0;
+//     }
+//   }
+
+
+//   &__span {
+//     position: absolute;
+//     background-color: #000000;
+//     left: 0;
+//     width: 100%;
+//     height: 2px;
+//     top: 9px;
+//   }
+// }
+
+.side_menu {
   @include sm-d {
+    position: fixed;
+    height: 100%;
+    left: -275px;
+    top: 0;
+    width: 270px;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    z-index: 10;
+  }
+}
+
+.list_load {
+  @include sm-d {
+
+    display: none;
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.side_menu .container {
+  @include sm-d {
+    margin-left: 20px;
+    margin-top: 20px;
+    overflow-y: scroll;
+    height: 100%;
+    width: 245px;
+  }
+}
+
+.burger_box {
+  @include sm-d {
+    float: right;
     display: block;
+    margin-right: -45px;
+    right: 0;
+  }
+}
+
+.burger_box .menu-icon_box {
+  @include sm-d {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: left;
+    left: 250px;
+    top: 32px;
+    overflow: hidden;
+    scale: 0.8;
+  }
+}
+
+.menu-icon_lines {
+  @include sm-d {
+    position: absolute;
+    top: -30px;
+    left: 90px;
     width: 30px;
     height: 20px;
-    top: 11px;
-    right: -15px;
-
-
-
-    &::before,
-    &::after {
-      content: "";
-      background-color: #000000;
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      left: 0;
-    }
-
-    &::before {
-      top: 0;
-    }
-
-    &::after {
-      bottom: 0;
-    }
   }
 
-
-  &__span {
+  @include as-d {
     position: absolute;
-    background-color: #000000;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: 9px;
+    top: -30px;
+    left: 70px;
+    width: 30px;
+    height: 20px;
   }
+
+}
+
+.burger_box .menu-icon_line {
+  @include sm-d {
+    position: absolute;
+    display: inline-block;
+    background-color: $darkBlue-900;
+    border-radius: 8px;
+    height: 2px;
+    width: 30px;
+  }
+}
+
+.burger_box .menu-icon_line--1 {
+  top: 0;
+}
+
+.burger_box .menu-icon_line--2 {
+  top: 10px;
+}
+
+.burger_box .menu-icon_line--3 {
+  top: 20px;
+}
+
+.burger_box .menu-icon.opened .menu-icon_line {
+  top: 10px;
+}
+
+.burger_box .menu-icon.opened .menu-icon_line--1 {
+  transform: rotate3d(0, 0, 1, 45deg);
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transition: top 100ms, transform 200ms 250ms;
+  -webkit-transition: top 100ms, -webkit-transform 200ms 250ms;
+}
+
+.burger_box .menu-icon.opened .menu-icon_line--2 {
+  opacity: 0;
+  transition: opacity 200ms;
+  -webkit-transition: opacity 200ms;
+}
+
+.burger_box .menu-icon.opened .menu-icon_line--3 {
+  transform: rotate3d(0, 0, 1, -45deg);
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+  transition: top 200ms, transform 200ms 250ms;
+  -webkit-transition: top 200ms, -webkit-transform 200ms 250ms;
 }
