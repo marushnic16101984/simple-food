@@ -44,6 +44,21 @@
       grid-row-start: 1;
       grid-column-start: 3;
       grid-column-end: 5;
+
+    }
+
+    @include sm-d {
+      position: fixed;
+      left: 0;
+      top: 245px;
+      width: 70%;
+      height: 100%;
+      background-color: #ffffff;
+      padding-left: 14px;
+      display: none;
+      z-index: 100;
+      border-top: 1px solid #EEEFF3;
+      padding-top: 18px;
     }
   }
 

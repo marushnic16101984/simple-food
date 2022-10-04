@@ -6,26 +6,21 @@
   background-color: #ffffff;
   z-index: 100;
 
-  // @include sm-d {
-  //   &::before {
-  //     content: "";
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     width: 80%;
-  //     height: 100%;
-  //     background-color: #ccffff;
-  //     z-index: 5;
-  //     border-bottom: 1px solid #EEEFF3;
-  //     transform: translateX(-700px);
-  //   }
-  // }
+  &__tablet {
 
-  // &--active:before {
-  //   @include sm-d {
-  //     transform: translateX(-1px);
-  //   }
-  // }
+    @include sm-d {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 80%;
+      height: 89px;
+      background-color: #ffffff;
+      border-bottom: 2px solid #EEEFF3;
+      display: none;
+      z-index: 6;
+    }
+  }
+
 
   &__wrapper {
     display: flex;
@@ -41,6 +36,12 @@
     @include sm-d {
       padding: 10px 0 10px;
     }
+
+    @include as-d {
+      padding: 14px 0 14px;
+    }
+
+
   }
 }
 
@@ -66,21 +67,16 @@
     @include sm-d {
       display: block;
       position: fixed;
-      top: 0;
+      top: 89px;
       left: 0;
       width: 80%;
       height: 100%;
       background-color: #ffffff;
-      padding: 110px 0 0 14px;
+      padding: 22px 0 0 14px;
       // transform: translateX(-800px);
       transition: all 0.3s ease;
       display: none;
     }
-
-    // &--active {
-    //   transform: translateX(0px);
-    // }
-
   }
 
   &__item {
@@ -91,7 +87,7 @@
     }
 
     @include sm-d {
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
   }
 
@@ -139,8 +135,9 @@
 
 .logo__img--active {
   @include sm-d {
-    width: 200px;
+    width: 197px;
     height: 39px;
+    transform: translateY(13px);
   }
 
 }
@@ -156,9 +153,9 @@
 
   }
 
-  // @include as-d {
-  //   padding-left: 10px;
-  // }
+  @include as-d {
+    padding-left: 78px;
+  }
 
 
   &__item {
@@ -177,6 +174,10 @@
 
     @include sm-d {
       margin-right: 5px;
+    }
+
+    @include as-d {
+      margin-right: 11px;
     }
 
     &:hover {
@@ -310,61 +311,14 @@
   }
 }
 
-
-
-// .burger {
-//   display: none;
-//   position: relative;
-//   z-index: 6;
-
-//   @include sm-d {
-//     display: block;
-//     width: 30px;
-//     height: 20px;
-//     top: 11px;
-//     right: -15px;
-
-
-
-//     &::before,
-//     &::after {
-//       content: "";
-//       background-color: #000000;
-//       position: absolute;
-//       width: 100%;
-//       height: 2px;
-//       left: 0;
-//     }
-
-//     &::before {
-//       top: 0;
-//     }
-
-//     &::after {
-//       bottom: 0;
-//     }
-//   }
-
-
-//   &__span {
-//     position: absolute;
-//     background-color: #000000;
-//     left: 0;
-//     width: 100%;
-//     height: 2px;
-//     top: 9px;
-//   }
-// }
-
 .side_menu {
+
   @include sm-d {
     position: fixed;
     height: 100%;
     left: -275px;
     top: 0;
     width: 270px;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
     z-index: 10;
   }
 }
@@ -385,10 +339,12 @@
     overflow-y: scroll;
     height: 100%;
     width: 245px;
+
   }
 }
 
 .burger_box {
+
   @include sm-d {
     float: right;
     display: block;
@@ -408,6 +364,7 @@
     top: 32px;
     overflow: hidden;
     scale: 0.8;
+
   }
 }
 
@@ -422,8 +379,8 @@
 
   @include as-d {
     position: absolute;
-    top: -30px;
-    left: 70px;
+    top: -26px;
+    left: 23px;
     width: 30px;
     height: 20px;
   }
