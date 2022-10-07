@@ -36,7 +36,9 @@
     }
 
     @include as-d {
-      background-size: 240px 290px;
+      background-size: 253px 300px;
+      transform: translateY(-28px);
+      padding-bottom: 0;
     }
   }
 
@@ -52,6 +54,11 @@
     @include sm-d {
       padding-top: 50px;
     }
+
+    @include as-d {
+      padding: 25px 0 30px;
+      width: 260px;
+    }
   }
 
   &__title {
@@ -65,8 +72,13 @@
 
     @include sm-d {
       font-size: 40px;
-      max-width: 280px;
+      max-width: 260px;
     }
+
+    @include as-d {
+      width: 2600px;
+    }
+
   }
 
   &__subtitle {
@@ -94,12 +106,25 @@
     letter-spacing: 0.3px;
     margin-right: 34px;
     transition: all 0.1s;
+
+    @include as-d {
+      padding: 8px 24px 8px 24px;
+      font-size: 14px;
+      display: inline-block;
+      margin-right: 26px;
+    }
   }
 
   &__link {
     line-height: 1.5;
     color: $darkBlue-900;
     text-decoration: underline 1px $darkBlue-900;
+
+    @include as-d {
+      display: inline-block;
+      font-size: 16px;
+      line-height: 1.6;
+    }
   }
 
   &__img {

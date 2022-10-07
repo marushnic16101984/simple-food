@@ -15,7 +15,7 @@
       width: 300px;
       height: 95px;
       background-color: #ffffff;
-      border-bottom: 2px solid #EEEFF3;
+      border-bottom: 1px solid #EEEFF3;
       display: none;
       z-index: 7;
     }
@@ -35,7 +35,6 @@
     }
   }
 
-
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -54,8 +53,6 @@
     @include as-d {
       padding: 14px 0 14px;
     }
-
-
   }
 }
 
@@ -70,12 +67,7 @@
     z-index: 6;
 
     @include lg-d {
-      padding: 0 80px 0 80px;
-    }
-
-    @include md-d {
-      padding: 0 100px 0 100px;
-
+      padding: 0 60px 0 60px;
     }
 
     @include sm-d {
@@ -90,6 +82,10 @@
       // transform: translateX(-800px);
       transition: all 0.3s ease;
       display: none;
+    }
+
+    @include as-d {
+      width: 300px;
     }
   }
 
@@ -139,7 +135,13 @@
 }
 
 .logo__img {
-  width: 100%;
+  width: 200px;
+  height: 39px;
+
+  @include md-d {
+    width: 200px;
+    height: 39px;
+  }
 
   @include sm-d {
     width: 116px;
@@ -187,7 +189,7 @@
     transition: all 0.5s ease;
 
     @include md-d {
-      margin-right: 30px;
+      margin-right: 20px;
     }
 
     @include sm-d {
@@ -331,14 +333,14 @@
 
 .side_menu {
 
-  @include sm-d {
-    position: fixed;
-    height: 89px;
-    left: -275px;
-    top: 0;
-    width: 270px;
-    z-index: 10;
-  }
+  // @include sm-d {
+  position: fixed;
+  height: 89px;
+  left: -275px;
+  top: 0;
+  width: 270px;
+  z-index: 10;
+  // }
 }
 
 .list_load {
@@ -360,6 +362,7 @@
 
   }
 }
+
 
 .burger_box {
 
@@ -390,7 +393,7 @@
   @include sm-d {
     position: absolute;
     top: -30px;
-    left: 90px;
+    left: 38px;
     width: 30px;
     height: 20px;
   }

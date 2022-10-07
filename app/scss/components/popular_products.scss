@@ -1,11 +1,21 @@
 .popular {
   padding-bottom: 23px;
 
+  &__wrapper {
+    @include as-d {
+      padding-top: 10px;
+    }
+  }
+
   &__title {
     margin-bottom: 63px;
 
     @include sm-d {
       margin-bottom: 25px;
+    }
+
+    @include as-d {
+      font-size: 24px;
     }
   }
 
@@ -20,6 +30,12 @@
       flex-wrap: wrap;
       padding: 0 30px;
     }
+
+    @include as-d {
+      flex-wrap: nowrap;
+      padding: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &__btn {
@@ -33,6 +49,11 @@
     @include xl-d {
       padding: 10px 15px 10px 15px;
       margin-bottom: 10px;
+    }
+
+    @include as-d {
+      padding: 12px 15px;
+      margin-bottom: 8px;
     }
 
     &:hover {
@@ -67,17 +88,28 @@
     display: inline-block;
     justify-content: space-between;
     padding-left: 10px;
+
+    @include as-d {
+      font-size: 14px;
+    }
   }
 
-  // &__svg {
-  //   @include md {
-  //     width: 30px;
-  //     height: 30px;
-  //   }
-  // }
+  &__svg {
+    @include lg-d {
+      width: 30px;
+      height: 30px;
+    }
+
+    @include as-d {
+      width: 22px;
+      height: 22px;
+    }
+  }
 }
 
-
+.slick-track {
+  align-items: flex-start;
+}
 
 .mixitup-control-active {
   background-color: $orange-900;
@@ -94,28 +126,30 @@
 .product {
   display: grid;
   grid-template-columns: repeat(5, 2fr);
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 30px;
   margin-bottom: 57px;
   transform: translate(-9px, -3px);
 
   @include lg-d {
     grid-template-columns: repeat(4, 3fr);
-    grid-column: 30px;
-    grid-row: 30px;
   }
 
   @include md-d {
     grid-template-columns: repeat(3, 4fr);
-    grid-column: 30px;
-    grid-row: 30px;
-
   }
 
   @include sm-d {
     grid-template-columns: repeat(2, 5fr);
-    grid-column: 30px;
-    grid-row: 30px;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
 
+  @include as-d {
+    column-gap: 5px;
+    row-gap: 10px;
+    padding-left: 10px;
+    margin-bottom: 25px;
   }
 
 
@@ -136,6 +170,10 @@
 
     @include md-d {
       max-width: 300px;
+    }
+
+    @include as-d {
+      width: 170px;
     }
 
     &:hover {
@@ -160,11 +198,20 @@
 
   &__name--margin {
     margin-bottom: 10px;
+
   }
 
   &__name--media {
     @include xl-d {
       margin-bottom: 10px;
+    }
+
+    @include lg-d {
+      margin-bottom: 30px;
+    }
+
+    @include as-d {
+      margin-bottom: 12px;
     }
   }
 
@@ -175,6 +222,10 @@
     line-height: 1.4;
     color: $darkBlue-900;
     margin-bottom: 5px;
+
+    @include as-d {
+      margin-bottom: 8px;
+    }
   }
 
   &__load {

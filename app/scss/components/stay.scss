@@ -29,6 +29,12 @@
         z-index: -1;
       }
     }
+
+    @include as-d {
+      background-size: 348px 462px;
+      background-position: 12px 38px;
+      padding: 0;
+    }
   }
 
   &__content {
@@ -49,17 +55,30 @@
     @include md-d {
       padding-bottom: 30px;
     }
+
+    @include as-d {
+      width: 100%;
+      padding: 38px 0;
+    }
   }
 
   &__title {
     display: block;
     text-align: left;
+
+    @include as-d {
+      font-size: 24px;
+    }
   }
 
   &__subtitle {
     display: block;
     margin-bottom: 30px;
     text-align: left;
+
+    @include as-d {
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -69,6 +88,11 @@
 
     @include lg-d {
       max-width: 600px;
+    }
+
+    @include as-d {
+      font-size: 16px;
+      margin-bottom: 35px;
     }
   }
 
@@ -83,6 +107,11 @@
     color: $darkBlue-900;
     padding-left: 64px;
 
+    @include as-d {
+      font-size: 18px;
+      padding-left: 45px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -92,6 +121,7 @@
     position: absolute;
     width: 34px;
     height: 34px;
+
 
     &--timer {
       position: absolute;

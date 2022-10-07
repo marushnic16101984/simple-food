@@ -2,12 +2,46 @@ $(function () {
 
   $('.review__wrapper').slick({
     dots: true
-
   }
-
   )
+  $('.popular__assortment').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    easing: 'easy',
+    adaptiveHeight: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    waitForAnimate: false,
+    variableWidth: true,
+    cssEase: String,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "unslick"
 
+      }],
+    mobileFirst: true
 
+  })
+
+  // $('.popular__assortment').slick({
+
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 4,
+  //         dots: true,
+  //         arrows: false
+  //       }
+  //     }
+  //   ]
+
+  // }
+  // )
 
 
   $(document).on('click', '.js-menu_toggle.burger', function (e) {
