@@ -52,6 +52,12 @@
 
 //mobile first down - ниже
 
+@mixin af5-d {
+  @media (max-width:map-get($breakpoints, af5) - .2px) {
+    @content;
+  }
+}
+
 @mixin as-d {
   @media (max-width:map-get($breakpoints, as) - .2px) {
     @content;

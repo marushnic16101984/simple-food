@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-position: 62px 92px;
     position: relative;
-    z-index: -2;
+    z-index: 0;
 
     @include xl-d {
       background-size: 400px 500px;
@@ -30,10 +30,16 @@
       }
     }
 
+    @include sm-d {
+      background-size: 348px 430px;
+      background-position: 12px 21px;
+      padding: 0;
+    }
+
     @include as-d {
       background-size: 348px 462px;
-      background-position: 12px 38px;
-      padding: 0;
+      background-position: 12px 21px;
+
     }
   }
 
@@ -52,13 +58,11 @@
       width: 600px;
     }
 
-    @include md-d {
-      padding-bottom: 30px;
-    }
 
-    @include as-d {
+    @include sm-d {
       width: 100%;
       padding: 38px 0;
+      margin-bottom: 29px;
     }
   }
 
@@ -66,7 +70,7 @@
     display: block;
     text-align: left;
 
-    @include as-d {
+    @include sm-d {
       font-size: 24px;
     }
   }
@@ -76,8 +80,9 @@
     margin-bottom: 30px;
     text-align: left;
 
-    @include as-d {
+    @include sm-d {
       font-size: 24px;
+      margin-bottom: 26px;
     }
   }
 
@@ -90,14 +95,19 @@
       max-width: 600px;
     }
 
-    @include as-d {
+    @include sm-d {
       font-size: 16px;
       margin-bottom: 35px;
+      padding-right: 10px;
     }
   }
 
   &__benefit {
     margin-bottom: 30px;
+
+    @include sm-d {
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
@@ -107,13 +117,17 @@
     color: $darkBlue-900;
     padding-left: 64px;
 
-    @include as-d {
+    @include sm-d {
       font-size: 18px;
       padding-left: 45px;
     }
 
     &:not(:last-child) {
       margin-bottom: 20px;
+
+      @include sm-d {
+        margin-bottom: 23px;
+      }
     }
   }
 
@@ -121,6 +135,10 @@
     position: absolute;
     width: 34px;
     height: 34px;
+
+    @include sm-d {
+      transform: translateY(-6px);
+    }
 
 
     &--timer {
@@ -140,5 +158,9 @@
   &__btn {
     padding: 12px 32px;
     font-size: 18px;
+
+    @include sm-d {
+      font-size: 14px;
+    }
   }
 }

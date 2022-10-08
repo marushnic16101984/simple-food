@@ -1,21 +1,44 @@
 .review {
+  &__title {
+    @include as-d {
+      font-size: 24px;
+    }
+  }
+
   &__wrapper {
     padding: 7px 0 123px;
 
     @include md-d {
       padding-bottom: 50px;
     }
+
+    @include sm-d {
+      padding: 30px 0 0;
+    }
   }
 
   &__foto {
     border-radius: 50%;
     margin-right: 40px;
+
+    @include sm-d {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-right: 0;
+    }
   }
 
   &__inner {
     display: block;
     display: flex !important;
     justify-content: center;
+
+    @include sm-d {
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -24,6 +47,10 @@
 
     @include lg-d {
       padding: 15px 30px 15px 15px;
+    }
+
+    @include sm-d {
+      padding: 28px 52px 29px 40px;
     }
   }
 
@@ -40,6 +67,11 @@
       font-size: 16px;
     }
 
+    @include sm-d {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
     &:before {
       content: "";
       left: -41px;
@@ -51,6 +83,13 @@
       mask-position: center;
       mask-size: contain;
       background-color: #C2C2C2;
+
+      @include sm-d {
+        width: 24px;
+        height: 24px;
+        left: -35px;
+        top: -12px;
+      }
     }
 
     &:after {
@@ -66,8 +105,20 @@
       mask-size: contain;
       background-color: #C2C2C2;
 
+      @include lg-d {
+        right: 20px;
+      }
+
       @include md-d {
-        right: -19px;
+        width: 24px;
+        height: 24px;
+        right: 15px;
+        bottom: 0;
+      }
+
+      @include as-d {
+        right: -35px;
+        bottom: 10px;
       }
     }
   }
@@ -78,7 +129,11 @@
     color: $orange-900;
 
     @include lg-d {
-      padding: 10px 0 5px;
+      padding: 10px 0 12px;
+    }
+
+    @include sm-d {
+      font-size: 16px;
     }
   }
 
@@ -99,11 +154,6 @@
     @include xl-d {
       position: relative;
     }
-
-    @include md-d {
-      // display: none;
-    }
-
 
     li {
       width: 15px;
@@ -126,6 +176,23 @@
         font-size: 0;
         border: none;
       }
+    }
+  }
+
+  .slick-slider {
+    @include sm-d {
+      position: relative;
+    }
+
+    .slick-arrow {
+
+      @include sm-d {
+        position: absolute;
+        top: 61px;
+        width: 36px;
+        height: 36px;
+      }
+
     }
   }
 
@@ -182,6 +249,13 @@
       left: 3px;
       top: 4px;
       z-index: -1;
+
+      @include sm-d {
+        width: 18px;
+        height: 18px;
+        left: 6px;
+        top: 6px;
+      }
     }
 
     @include xl-d {
@@ -191,6 +265,11 @@
     @include md-d {
       transform: translateX(-800px);
       overflow: hidden;
+    }
+
+    @include sm-d {
+      transform: translateX(0);
+      left: 37px;
     }
   }
 
@@ -218,6 +297,11 @@
     @include md-d {
       transform: translateX(-800px);
       overflow: hidden;
+    }
+
+    @include sm-d {
+      transform: translateX(0);
+      right: 51px;
     }
 
     &:hover {
@@ -256,6 +340,13 @@
       left: 5px;
       top: 4px;
       z-index: -1;
+
+      @include sm-d {
+        width: 18px;
+        height: 18px;
+        left: 6px;
+        top: 6px;
+      }
     }
   }
 

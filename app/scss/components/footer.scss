@@ -12,19 +12,36 @@
     }
 
     @include md-d {
-      column-gap: 100px;
+      column-gap: 75px;
       row-gap: 30px;
     }
 
     @include sm-d {
-      column-gap: 70px;
+      row-gap: 0;
+      // grid-template-columns: 1fr;
+      grid-template-rows: 21% 23% 19% 19% 19%;
     }
+
+    // @include as-d {
+    //   display: block;
+    // }
   }
 
   &__logo {
     display: block;
     margin-bottom: 30px;
     width: 210px;
+
+    @include as-d {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__img {
+    @include sm-d {
+      width: 200px;
+      height: 39px;
+    }
   }
 
   &__icon-frame {
@@ -33,6 +50,30 @@
 
   &__list {
     font-size: 18px;
+
+    &--part1 {
+      @include sm-d {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+
+    &--part2 {
+      @include sm-d {
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+
+    &--part3 {
+      @include sm-d {
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
   }
 
   &__item {
@@ -44,9 +85,17 @@
       grid-row-start: 1;
       grid-column-start: 3;
       grid-column-end: 5;
-
     }
 
+    @include sm-d {
+      grid-row-start: 2;
+      grid-column-start: 1;
+      grid-column-end: 6;
+
+    }
+  }
+
+  &__adress--fixed {
     @include sm-d {
       position: fixed;
       left: 0;
@@ -138,6 +187,15 @@
     @include md-d {
       grid-column-start: 1;
       grid-column-end: 3;
+    }
+
+    @include sm-d {
+      grid-column-start: 1;
+      grid-column-end: 6;
+    }
+
+    @include sm-d {
+      margin-bottom: 30px;
     }
   }
 

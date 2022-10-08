@@ -9,6 +9,7 @@
       "md": "@include md {\n\t${1}\n}",
       "lg": "@include lg {\n\t${1}\n}",
       "xl": "@include xl {\n\t${1}\n}",
+      "af5d": "@include af5-d {\n\t${1}\n}",
       "asd": "@include as-d {\n\t${1}\n}",
       "smd": "@include sm-d {\n\t${1}\n}",
       "mdd": "@include md-d {\n\t${1}\n}",

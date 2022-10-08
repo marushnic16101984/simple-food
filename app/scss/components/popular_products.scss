@@ -53,7 +53,7 @@
 
     @include as-d {
       padding: 12px 15px;
-      margin-bottom: 8px;
+      margin-bottom: 24px;
     }
 
     &:hover {
@@ -143,6 +143,7 @@
     grid-template-columns: repeat(2, 5fr);
     column-gap: 30px;
     row-gap: 30px;
+    margin-bottom: 25px;
   }
 
   @include as-d {
