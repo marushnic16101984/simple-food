@@ -1,8 +1,22 @@
 .popular {
   padding-bottom: 23px;
 
+  &__wrapper {
+    @include as-d {
+      padding-top: 10px;
+    }
+  }
+
   &__title {
     margin-bottom: 63px;
+
+    @include sm-d {
+      margin-bottom: 25px;
+    }
+
+    @include as-d {
+      font-size: 24px;
+    }
   }
 
   &__assortment {
@@ -11,6 +25,17 @@
     justify-content: space-between;
     margin-bottom: 45px;
     transform: translate(-9px, -3px);
+
+    @include lg-d {
+      flex-wrap: wrap;
+      padding: 0 30px;
+    }
+
+    @include as-d {
+      flex-wrap: nowrap;
+      padding: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &__btn {
@@ -20,6 +45,16 @@
     align-items: center;
     transition: all 0.3s;
     border-color: transparent;
+
+    @include xl-d {
+      padding: 10px 15px 10px 15px;
+      margin-bottom: 10px;
+    }
+
+    @include as-d {
+      padding: 12px 15px;
+      margin-bottom: 24px;
+    }
 
     &:hover {
 
@@ -53,7 +88,27 @@
     display: inline-block;
     justify-content: space-between;
     padding-left: 10px;
+
+    @include as-d {
+      font-size: 14px;
+    }
   }
+
+  &__svg {
+    @include lg-d {
+      width: 30px;
+      height: 30px;
+    }
+
+    @include as-d {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.slick-track {
+  align-items: flex-start;
 }
 
 .mixitup-control-active {
@@ -71,9 +126,32 @@
 .product {
   display: grid;
   grid-template-columns: repeat(5, 2fr);
-  grid-gap: 30px;
+  column-gap: 30px;
+  row-gap: 30px;
   margin-bottom: 57px;
   transform: translate(-9px, -3px);
+
+  @include lg-d {
+    grid-template-columns: repeat(4, 3fr);
+  }
+
+  @include md-d {
+    grid-template-columns: repeat(3, 4fr);
+  }
+
+  @include sm-d {
+    grid-template-columns: repeat(2, 5fr);
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-bottom: 25px;
+  }
+
+  @include as-d {
+    column-gap: 5px;
+    row-gap: 10px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+  }
 
 
   &__card {
@@ -86,6 +164,18 @@
     display: block;
     position: relative;
     transition: box-shadow 0.5s;
+
+    @include lg-d {
+      padding: 15px 10px 15px 10px;
+    }
+
+    @include md-d {
+      max-width: 300px;
+    }
+
+    @include as-d {
+      width: 170px;
+    }
 
     &:hover {
       box-shadow: 0 0 0 1px $orange-900;
@@ -109,6 +199,21 @@
 
   &__name--margin {
     margin-bottom: 10px;
+
+  }
+
+  &__name--media {
+    @include xl-d {
+      margin-bottom: 10px;
+    }
+
+    @include lg-d {
+      margin-bottom: 30px;
+    }
+
+    @include as-d {
+      margin-bottom: 12px;
+    }
   }
 
   &__price {
@@ -118,6 +223,10 @@
     line-height: 1.4;
     color: $darkBlue-900;
     margin-bottom: 5px;
+
+    @include as-d {
+      margin-bottom: 8px;
+    }
   }
 
   &__load {

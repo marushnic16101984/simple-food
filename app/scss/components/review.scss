@@ -1,30 +1,76 @@
 .review {
+  &__title {
+    @include as-d {
+      font-size: 24px;
+    }
+  }
+
   &__wrapper {
     padding: 7px 0 123px;
 
+    @include md-d {
+      padding-bottom: 50px;
+    }
+
+    @include sm-d {
+      padding: 30px 0 0;
+    }
   }
 
   &__foto {
     border-radius: 50%;
     margin-right: 40px;
 
+    @include sm-d {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-right: 0;
+    }
   }
 
   &__inner {
     display: block;
     display: flex !important;
     justify-content: center;
+
+    @include sm-d {
+      flex-direction: column;
+    }
   }
 
   &__content {
     max-width: 650px;
     padding: 30px 44px 30px 31px;
+
+    @include lg-d {
+      padding: 15px 30px 15px 15px;
+    }
+
+    @include sm-d {
+      padding: 28px 52px 29px 40px;
+    }
   }
 
   &__quote {
     position: relative;
     line-height: 1.5;
     font-style: italic;
+
+    @include lg-d {
+      font-size: 18px;
+    }
+
+    @include md-d {
+      font-size: 16px;
+    }
+
+    @include sm-d {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
 
     &:before {
       content: "";
@@ -37,6 +83,13 @@
       mask-position: center;
       mask-size: contain;
       background-color: #C2C2C2;
+
+      @include sm-d {
+        width: 24px;
+        height: 24px;
+        left: -35px;
+        top: -12px;
+      }
     }
 
     &:after {
@@ -51,6 +104,22 @@
       mask-position: center;
       mask-size: contain;
       background-color: #C2C2C2;
+
+      @include lg-d {
+        right: 20px;
+      }
+
+      @include md-d {
+        width: 24px;
+        height: 24px;
+        right: 15px;
+        bottom: 0;
+      }
+
+      @include as-d {
+        right: -35px;
+        bottom: 10px;
+      }
     }
   }
 
@@ -59,11 +128,22 @@
     font-weight: 500;
     color: $orange-900;
 
+    @include lg-d {
+      padding: 10px 0 12px;
+    }
+
+    @include sm-d {
+      font-size: 16px;
+    }
   }
 
   &__text {
     padding-bottom: 20px;
     font-size: 14px;
+
+    @include md-d {
+      padding-bottom: 10px;
+    }
   }
 
   .slick-dots {
@@ -71,6 +151,9 @@
     justify-content: center;
     transform: translateX(-8px);
 
+    @include xl-d {
+      position: relative;
+    }
 
     li {
       width: 15px;
@@ -93,6 +176,23 @@
         font-size: 0;
         border: none;
       }
+    }
+  }
+
+  .slick-slider {
+    @include sm-d {
+      position: relative;
+    }
+
+    .slick-arrow {
+
+      @include sm-d {
+        position: absolute;
+        top: 61px;
+        width: 36px;
+        height: 36px;
+      }
+
     }
   }
 
@@ -149,6 +249,27 @@
       left: 3px;
       top: 4px;
       z-index: -1;
+
+      @include sm-d {
+        width: 18px;
+        height: 18px;
+        left: 6px;
+        top: 6px;
+      }
+    }
+
+    @include xl-d {
+      left: 235px;
+    }
+
+    @include md-d {
+      transform: translateX(-800px);
+      overflow: hidden;
+    }
+
+    @include sm-d {
+      transform: translateX(0);
+      left: 37px;
     }
   }
 
@@ -158,6 +279,34 @@
     position: relative;
     cursor: pointer;
     z-index: 1;
+
+    @include xl-d {
+      left: auto;
+      right: 280px;
+      position: absolute;
+      top: 394px;
+    }
+
+    @include lg-d {
+      left: auto;
+      right: 250px;
+      position: absolute;
+      top: 394px;
+    }
+
+    @include md-d {
+      transform: translateX(-800px);
+      overflow: hidden;
+    }
+
+    @include sm-d {
+      transform: translateX(0);
+      right: 51px;
+    }
+
+    @include as-d {
+      right: 37px;
+    }
 
     &:hover {
       background-color: #FFF2ED;
@@ -195,6 +344,13 @@
       left: 5px;
       top: 4px;
       z-index: -1;
+
+      @include sm-d {
+        width: 18px;
+        height: 18px;
+        left: 6px;
+        top: 6px;
+      }
     }
   }
 

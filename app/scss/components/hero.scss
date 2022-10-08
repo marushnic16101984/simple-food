@@ -1,18 +1,64 @@
 .hero {
+  position: relative;
+  padding-top: 155px;
+
+  @include md-d {
+    padding-top: 120px;
+  }
+
+  @include sm-d {
+    padding-top: 100px;
+  }
 
   &__wrapper {
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 560px 660px;
     padding-bottom: 117px;
+    position: relative;
+    z-index: 1;
+
+    @include lg-d {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(249, 250, 255, 0.85);
+        z-index: -1;
+      }
+    }
+
+    @include sm-d {
+      background-size: 350px 450px;
+    }
+
+    @include as-d {
+      background-size: 253px 300px;
+      transform: translateY(-28px);
+      padding-bottom: 0;
+    }
   }
 
   &__content {
     padding: 159px 0;
     max-width: 459px;
     margin-right: 142px;
-    transform: translateX(-5px);
 
+    @include md-d {
+      padding-bottom: 100px;
+    }
+
+    @include sm-d {
+      padding-top: 50px;
+    }
+
+    @include as-d {
+      padding: 25px 0 30px;
+      width: 260px;
+    }
   }
 
   &__title {
@@ -23,15 +69,35 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     display: block;
+
+    @include sm-d {
+      font-size: 40px;
+      max-width: 260px;
+    }
+
+    @include as-d {
+      width: 2600px;
+    }
+
   }
 
   &__subtitle {
     color: $orange-900;
+
+    @include sm-d {
+      font-size: 40px;
+      max-width: 500px;
+    }
   }
 
   &__text {
     line-height: 1.5;
     margin-bottom: 20px;
+
+    @include sm-d {
+      font-size: 16px;
+      width: 310px;
+    }
   }
 
   &__btn {
@@ -40,12 +106,25 @@
     letter-spacing: 0.3px;
     margin-right: 34px;
     transition: all 0.1s;
+
+    @include sm-d {
+      padding: 8px 24px 8px 24px;
+      font-size: 14px;
+      display: inline-block;
+      margin-right: 26px;
+    }
   }
 
   &__link {
     line-height: 1.5;
     color: $darkBlue-900;
     text-decoration: underline 1px $darkBlue-900;
+
+    @include sm-d {
+      display: inline-block;
+      font-size: 16px;
+      line-height: 1.6;
+    }
   }
 
   &__img {
