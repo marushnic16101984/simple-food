@@ -304,6 +304,10 @@
       right: 51px;
     }
 
+    @include as-d {
+      right: 37px;
+    }
+
     &:hover {
       background-color: #FFF2ED;
       border: 3px solid #FFAE94;
