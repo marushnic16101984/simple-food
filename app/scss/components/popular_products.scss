@@ -132,21 +132,22 @@
   transform: translate(-9px, -3px);
 
   @include lg-d {
-    grid-template-columns: repeat(4, 3fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @include md-d {
-    grid-template-columns: repeat(3, 4fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @include sm-d {
-    grid-template-columns: repeat(2, 5fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
     row-gap: 30px;
     margin-bottom: 25px;
   }
 
   @include as-d {
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 5px;
     row-gap: 10px;
     padding-left: 10px;
@@ -199,7 +200,6 @@
 
   &__name--margin {
     margin-bottom: 10px;
-
   }
 
   &__name--media {
